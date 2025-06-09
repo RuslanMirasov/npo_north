@@ -77,3 +77,70 @@ a {
   text-decoration: none;
   color: inherit;
 }
+
+.section {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  &.full {
+    min-height: 100vh;
+    height: 100%;
+  }
+}
+
+.container {
+  display: block;
+  position: relative;
+  width: 100%;
+  max-width: 1440px;
+  padding: 0px 24px;
+
+  @media (max-width: 1279px) {
+    padding: 0px 40px;
+  }
+
+  @media (max-width: 767px) {
+    padding: 0px 20px;
+  }
+}
+
+.lines {
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0px;
+    height: 100%;
+    z-index: 0;
+  }
+
+  &:before {
+    width: 1px;
+    left: 50%;
+    background: var(--grey-light);
+  }
+
+  &:after {
+    width: 50%;
+    max-width: calc((1440px - 48px) / 2);
+    left: 50%;
+    transform: translate(-50%, 0%);
+    border-left: 1px solid var(--grey-light);
+    border-right: 1px solid var(--grey-light);
+  }
+
+  @media (max-width: 1279px) {
+    &:after {
+      width: calc(50% - 12px);
+      max-width: calc((1440px - 48px) / 2);
+    }
+  }
+
+  @media (max-width: 767px) {
+    &:after {
+      width: calc(100% - 38px);
+      max-width: calc(100% - 38px);
+    }
+  }
+}

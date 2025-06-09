@@ -1,7 +1,9 @@
 .marquee {
+  position: relative;
   overflow: hidden;
   white-space: nowrap;
   width: 100%;
+  z-index: 1;
 }
 
 .marquee__inner {
@@ -12,9 +14,9 @@
 .marquee__inner span {
   display: inline-block;
   white-space: nowrap;
-  font-size: 120px;
-  line-height: 1.2;
-  color: var(--brown);
+  font-size: 190px;
+  line-height: 1;
+  color: var(--blue-light);
   padding-right: 4rem;
 }
 

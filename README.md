@@ -1,3 +1,3 @@
-# Omsk becon website
+# НПО Север website
 
 ![Project Preview](./public/poster.webp)

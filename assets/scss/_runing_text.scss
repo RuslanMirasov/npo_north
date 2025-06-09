@@ -1,0 +1,41 @@
+.marquee {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+}
+
+.marquee__inner {
+  display: inline-flex;
+  animation: marquee 15s linear infinite;
+}
+
+.marquee__inner span {
+  display: inline-block;
+  white-space: nowrap;
+  font-size: 120px;
+  line-height: 1.2;
+  color: var(--brown);
+  padding-right: 4rem;
+}
+
+/* Анимация */
+@keyframes marquee {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 1279px) {
+  .marquee__inner span {
+    font-size: 80px;
+  }
+}
+
+@media (max-width: 767px) {
+  .marquee__inner span {
+    font-size: 60px;
+  }
+}

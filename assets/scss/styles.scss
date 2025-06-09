@@ -1,0 +1,24 @@
+:root {
+  --400: "wix_madefor_display_regular", sans-serif;
+  --500: "wix_madefor_display_medium", sans-serif;
+
+  --bg: #ffffff;
+  --white: #ffffff;
+  --blue: #002db7;
+  --blue-light: #002db7;
+  --grey-light: #f2f2f2;
+  --black: #231f20;
+
+  --red: #b7142b;
+}
+
+@import "mixins";
+@import "fonts";
+@import "preloader";
+@import "reset";
+@import "header";
+@import "buttons";
+@import "typography";
+@import "footer";
+@import "runing_text";
+@import "section__hero";

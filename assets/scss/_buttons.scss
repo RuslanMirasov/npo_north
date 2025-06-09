@@ -1,0 +1,49 @@
+.button {
+  display: inline-flex;
+  overflow: hidden;
+  z-index: 1;
+
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  position: relative;
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--white);
+  font-family: var(--400);
+  padding: 12px 40px;
+  z-index: 1;
+  transition: 0.3s;
+  user-select: none;
+  outline: none;
+  cursor: pointer;
+  background: var(--blue-light);
+
+  &.full {
+    width: 100%;
+  }
+
+  &.small {
+    padding: 6px 24px;
+    font-size: 14px;
+    line-height: 1;
+    font-family: var(--500);
+    background: var(--blue);
+    min-height: 30px;
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+    z-index: -1;
+    transition: 0.3s;
+  }
+
+  &:hover {
+    &:before {
+      opacity: 1;
+    }
+  }
+}

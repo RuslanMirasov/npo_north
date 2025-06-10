@@ -9,23 +9,21 @@ export const scrollToBlock = (selector, offset = 0) => {
 
   window.scrollTo({
     top: y,
-    behavior: "smooth",
+    behavior: 'smooth',
   });
 };
 
-const handleScrollLinkClick = (e) => {
+const handleScrollLinkClick = e => {
   e.preventDefault();
-  const target = e.target.href.split("#")[1];
+  const target = e.target.href.split('#')[1];
   // closeMenu();
-  scrollToBlock(`#${target}`, -50);
+  scrollToBlock(`#${target}`);
 };
 
 export const initScrollToBlock = () => {
-  const scrollLinks = document.querySelectorAll("[data-scrollto]");
+  const scrollLinks = document.querySelectorAll('[data-scrollto]');
 
   if (scrollLinks.length > 0) {
-    scrollLinks.forEach((link) =>
-      link.addEventListener("click", handleScrollLinkClick)
-    );
+    scrollLinks.forEach(link => link.addEventListener('click', handleScrollLinkClick));
   }
 };

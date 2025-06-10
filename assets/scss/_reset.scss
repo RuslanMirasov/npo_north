@@ -83,6 +83,7 @@ a {
   position: relative;
   overflow: hidden;
   width: 100%;
+  background: var(--white);
   &.full {
     min-height: 100vh;
     height: 100%;

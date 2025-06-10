@@ -1,6 +1,110 @@
+.scroll-container {
+  display: flex;
+  width: 100%;
+  align-items: flex-end;
+  align-content: flex-end;
+  justify-content: center;
+  position: relative;
+  height: 100vh;
+  background: #6a6a6a;
+}
+
+.hero-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+}
+
 .section--hero {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: flex-end;
   height: 100%;
   min-height: 100vh;
-  background: #b0afb0 url("../img/main/hero_sky.webp") no-repeat center top;
-  background-size: 100% auto;
+  background: #b0afb0 url('../img/main/hero_sky.webp') no-repeat center top/cover;
+  background-size: 100% 60%;
+  overflow: hidden;
+  color: var(--white);
+
+  .title--h1 {
+    display: flex;
+    align-items: flex-end;
+    align-content: flex-end;
+    position: relative;
+    z-index: 2;
+    width: auto;
+    margin-top: auto;
+    margin-left: auto;
+    margin-right: auto;
+    flex: 1;
+    padding-top: 88px;
+    padding-bottom: 20px;
+  }
+
+  .arrow {
+    position: absolute;
+    left: 50%;
+    bottom: 0%;
+    margin-left: -25px;
+  }
+}
+
+.hero-light {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  min-height: 100vh;
+  width: auto;
+  transform: translate(0vw, 0%);
+  transition: transform 2s cubic-bezier(0, 0.86, 0.07, 1);
+}
+
+.hero-description {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  height: 42%;
+  background: rgba(63, 63, 63, 0.5) url('../img/main/water.webp') no-repeat center top/cover;
+  backdrop-filter: blur(30px);
+  z-index: 1;
+  padding: 50px 100px;
+
+  .container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    align-content: flex-end;
+    position: relative;
+    margin: 0 auto;
+  }
+}
+
+.hero-mountains {
+  display: block;
+  width: 100%;
+  margin-bottom: -1%;
+  position: relative;
+  z-index: 2;
+  img {
+    &.mountains {
+      position: relative;
+      transform: translate(-50%, 0%);
+      left: 50%;
+      width: 100%;
+      min-width: 1440px;
+    }
+    &.oil {
+      width: auto;
+      height: 80%;
+      position: absolute;
+      left: 50%;
+      transform: translate(-468px, 0px);
+      bottom: 50%;
+    }
+  }
 }

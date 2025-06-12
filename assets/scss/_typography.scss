@@ -4,8 +4,12 @@
   font-weight: 500;
 
   &.title--h1 {
-    font-size: 80px;
+    font-size: myclamp(62px, 80px, 1440px, 1440px);
     line-height: 1;
+
+    @media (max-width: 767px) {
+      font-size: myclamp(38px, 62px, 767px, 767px);
+    }
   }
 
   &.title--h2 {

@@ -17,10 +17,8 @@
     line-height: 1.2;
   }
 
-  &.title--h3 {
-    font-size: 24px;
+  &.title--64 {
+    font-size: myclamp(50px, 64px, 1440px, 1440px);
     line-height: 1;
-    letter-spacing: -0.48px;
-    text-align: center;
   }
 }

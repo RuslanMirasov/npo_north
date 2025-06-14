@@ -145,14 +145,14 @@
   .navigation {
     position: fixed;
     align-items: flex-start;
-    width: calc(100% + 40px);
+    width: calc(100% + 20px);
     height: 100vh;
     overflow-x: hidden;
     overflow-y: auto;
     scrollbar-width: none;
     -ms-overflow-style: none;
-    top: -20px;
-    right: -20px;
+    top: -10px;
+    right: -10px;
     background: var(--blue-light);
     color: var(--white);
     transform: translate(0%, -100%);
@@ -203,5 +203,14 @@
         margin-top: auto;
       }
     }
+  }
+}
+
+@media (max-width: 767px) {
+  .navigation {
+    width: calc(100% + 40px);
+    top: -20px;
+    right: -20px;
+    bottom: -20px;
   }
 }

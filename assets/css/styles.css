@@ -216,6 +216,8 @@ a {
   width: 100%;
   max-width: 1440px;
   padding: 0px 24px;
+  margin: 0 auto;
+  z-index: 1;
 }
 @media (max-width: 1279px) {
   .container {
@@ -234,6 +236,7 @@ a {
   top: 0px;
   height: 100%;
   z-index: 0;
+  pointer-events: none;
 }
 .lines:before {
   width: 1px;
@@ -397,14 +400,14 @@ a {
   .navigation {
     position: fixed;
     align-items: flex-start;
-    width: calc(100% + 40px);
+    width: calc(100% + 20px);
     height: 100vh;
     overflow-x: hidden;
     overflow-y: auto;
     scrollbar-width: none;
     -ms-overflow-style: none;
-    top: -20px;
-    right: -20px;
+    top: -10px;
+    right: -10px;
     background: var(--blue-light);
     color: var(--white);
     transform: translate(0%, -100%);
@@ -452,6 +455,14 @@ a {
   }
   .menu li:last-child {
     margin-top: auto;
+  }
+}
+@media (max-width: 767px) {
+  .navigation {
+    width: calc(100% + 40px);
+    top: -20px;
+    right: -20px;
+    bottom: -20px;
   }
 }
 .button {
@@ -586,19 +597,18 @@ a {
   font-family: var(--500);
   font-weight: 500;
 }
-.title.title--h1 {
+.title.title--80 {
   font-size: clamp(62px, 5.5556vw, 80px);
   line-height: 1;
 }
 @media (max-width: 767px) {
-  .title.title--h1 {
+  .title.title--80 {
     font-size: clamp(38px, 8.0834vw, 62px);
   }
 }
-.title.title--h2 {
-  font-size: 42px;
+.title.title--100 {
+  font-size: clamp(50px, 6.9444vw, 100px);
   line-height: 1.2;
-  letter-spacing: -0.84px;
 }
 .title.title--h3 {
   font-size: 24px;
@@ -818,7 +828,7 @@ a {
   overflow: hidden;
   color: var(--white);
 }
-.section--hero .title--h1 {
+.section--hero .title--80 {
   display: flex;
   align-items: flex-end;
   align-content: flex-end;
@@ -832,7 +842,7 @@ a {
   padding: 88px 30px 20px 30px;
 }
 @media (max-width: 767px) {
-  .section--hero .title--h1 {
+  .section--hero .title--80 {
     align-items: center;
     align-content: center;
     display: inline;
@@ -844,7 +854,7 @@ a {
             hyphens: auto;
     max-width: 100%;
   }
-  .section--hero .title--h1 br {
+  .section--hero .title--80 br {
     display: none;
   }
 }
@@ -981,5 +991,132 @@ a {
 @media (max-width: 767px) {
   .hero-mountains img.oil {
     transform: translate(50px, 0px);
+  }
+}
+
+.section--about {
+  overflow: hidden;
+  padding-top: clamp(120px, 16.6667vw, 240px);
+  padding-bottom: clamp(50px, 6.9444vw, 100px);
+}
+
+.abot-image {
+  width: 41%;
+  position: absolute;
+  background: var(--grey-light);
+  left: 24px;
+  top: 5%;
+  z-index: 1;
+}
+.abot-image img {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.abot-image:before {
+  content: "";
+  display: block;
+  width: 100%;
+  padding-top: 56.27%;
+}
+.abot-image:after {
+  content: "";
+  height: 220%;
+  width: 5000px;
+  position: absolute;
+  right: 0px;
+  top: 50%;
+  transform: translate(0%, -50%);
+  background: url("../img/svg/g_grey.svg") no-repeat right center;
+  background-size: auto 100%;
+}
+@media (max-width: 1023px) {
+  .abot-image {
+    width: calc(50% - 40px);
+    left: 40px;
+    top: 3%;
+  }
+}
+@media (max-width: 767px) {
+  .abot-image {
+    position: relative;
+    width: 274px;
+    left: 0px;
+    top: 0%;
+    margin-bottom: 30px;
+  }
+}
+
+.about {
+  width: 46%;
+  margin-left: auto;
+  position: relative;
+  z-index: 2;
+}
+@media (max-width: 1279px) {
+  .about .title {
+    font-size: clamp(50px, 6.25vw, 90px);
+  }
+}
+.about .title.absolute {
+  position: relative;
+  transform: translate(-30.5%, 0px);
+  margin-bottom: 10px;
+}
+@media (max-width: 1023px) {
+  .about .title.absolute {
+    transform: translate(-46px, 0px);
+  }
+}
+@media (max-width: 767px) {
+  .about .title.absolute {
+    transform: translate(0px, 0px);
+    text-align: left;
+  }
+}
+.about .about__text {
+  max-width: 300px;
+  font-size: 14px;
+  text-align: left;
+}
+@media (max-width: 1279px) {
+  .about .about__text {
+    font-size: 12px;
+    max-width: 240px;
+  }
+}
+.about .about__text.absolute {
+  position: absolute;
+  right: 2%;
+  top: 27%;
+}
+@media (max-width: 1279px) {
+  .about .about__text.absolute {
+    right: 0%;
+    top: 25%;
+  }
+}
+@media (max-width: 1023px) {
+  .about {
+    width: 50%;
+    padding-left: 30px;
+  }
+  .about .about__text.absolute {
+    position: relative;
+    right: 0%;
+    top: 0%;
+    margin-left: auto;
+  }
+}
+@media (max-width: 767px) {
+  .about {
+    width: 100%;
+    padding-left: 0px;
+    text-align: right;
+    margin: 10px 0px;
   }
 }

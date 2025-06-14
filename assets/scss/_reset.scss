@@ -96,6 +96,8 @@ a {
   width: 100%;
   max-width: 1440px;
   padding: 0px 24px;
+  margin: 0 auto;
+  z-index: 1;
 
   @media (max-width: 1279px) {
     padding: 0px 40px;
@@ -114,6 +116,7 @@ a {
     top: 0px;
     height: 100%;
     z-index: 0;
+    pointer-events: none;
   }
 
   &:before {

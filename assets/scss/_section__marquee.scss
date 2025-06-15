@@ -1,6 +1,7 @@
 .section--marquee {
   position: relative;
   padding-bottom: 50px;
+  padding-top: 30px;
   .container {
     position: absolute;
     left: 50%;
@@ -12,11 +13,11 @@
     &:after {
       content: '';
       position: absolute;
-      width: calc(25% - 12px);
+      width: calc(25% - 13px);
       height: 100%;
       backdrop-filter: blur(5px);
       top: 0px;
-      left: calc(25% + 12px);
+      left: calc(25% + 13px);
     }
 
     &:after {
@@ -44,6 +45,7 @@
 
 @media (max-width: 767px) {
   .section--marquee {
+    padding-top: 0px;
     padding-bottom: 40px;
     .container {
       &:before,

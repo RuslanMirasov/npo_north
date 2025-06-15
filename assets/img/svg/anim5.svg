@@ -1,0 +1,29 @@
+<svg viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Верхний левый -->
+  <g>
+    <path d="M12.5 25C19.4036 25 25 19.4035 25 12.5C25 5.59644 19.4036 0 12.5 0C5.59644 0 0 5.59644 0 12.5C0 19.4035 5.59644 25 12.5 25Z" fill="#002DB7">
+      <animateTransform attributeName="transform" type="translate" values="0 0;3 3;3 3;0 0;0 0" keyTimes="0;0.25;0.5;0.75;1" dur="3s" repeatCount="indefinite" calcMode="spline" keySplines="0 0 1 1;0.42 0 1 1;0 0 1 1;0 0 0.58 1"></animateTransform>
+    </path>
+  </g>
+
+  <!-- Верхний правый -->
+  <g>
+    <path d="M43.5 25C50.4036 25 56 19.4035 56 12.5C56 5.59644 50.4036 0 43.5 0C36.5964 0 31 5.59644 31 12.5C31 19.4035 36.5964 25 43.5 25Z" fill="#002DB7">
+      <animateTransform attributeName="transform" type="translate" values="0 0;-3 3;-3 3;0 0;0 0" keyTimes="0;0.25;0.5;0.75;1" dur="3s" repeatCount="indefinite" calcMode="spline" keySplines="0 0 1 1;0.42 0 1 1;0 0 1 1;0 0 0.58 1"></animateTransform>
+    </path>
+  </g>
+
+  <!-- Нижний левый -->
+  <g>
+    <path d="M12.5 56C19.4036 56 25 50.4035 25 43.5C25 36.5964 19.4036 31 12.5 31C5.59644 31 0 36.5964 0 43.5C0 50.4035 5.59644 56 12.5 56Z" fill="#002DB7">
+      <animateTransform attributeName="transform" type="translate" values="0 0;3 -3;3 -3;0 0;0 0" keyTimes="0;0.25;0.5;0.75;1" dur="3s" repeatCount="indefinite" calcMode="spline" keySplines="0 0 1 1;0.42 0 1 1;0 0 1 1;0 0 0.58 1"></animateTransform>
+    </path>
+  </g>
+
+  <!-- Нижний правый -->
+  <g>
+    <path d="M43.5 56C50.4036 56 56 50.4035 56 43.5C56 36.5964 50.4036 31 43.5 31C36.5964 31 31 36.5964 31 43.5C31 50.4035 36.5964 56 43.5 56Z" fill="#002DB7">
+      <animateTransform attributeName="transform" type="translate" values="0 0;-3 -3;-3 -3;0 0;0 0" keyTimes="0;0.25;0.5;0.75;1" dur="3s" repeatCount="indefinite" calcMode="spline" keySplines="0 0 1 1;0.42 0 1 1;0 0 1 1;0 0 0.58 1"></animateTransform>
+    </path>
+  </g>
+</svg>

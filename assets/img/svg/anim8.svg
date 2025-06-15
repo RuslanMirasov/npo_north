@@ -1,0 +1,43 @@
+<svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Левый ромб -->
+  <path fill="#002DB7">
+    <animate attributeName="d"
+      dur="3s"
+      repeatCount="indefinite"
+      values="
+        M30 30L15 10L0 30L15 50L30 30Z;
+        M30 30L15 10L0 30L15 50L30 30Z;
+        M30 30L15 0L0 30L15 60L30 30Z;
+        M30 30L15 0L0 30L15 60L30 30Z;
+        M30 30L15 10L0 30L15 50L30 30Z"
+      keyTimes="0;0.1666;0.5;0.6666;1"
+      calcMode="spline"
+      keySplines="
+        0 0 1 1;
+        0 0 1 1;
+        0.42 0 1 1;
+        0 0 0.58 1"
+    />
+  </path>
+
+  <!-- Правый ромб -->
+  <path fill="#002DB7">
+    <animate attributeName="d"
+      dur="3s"
+      repeatCount="indefinite"
+      values="
+        M60 30L45 0L30 30L45 60L60 30Z;
+        M60 30L45 0L30 30L45 60L60 30Z;
+        M60 30L45 10L30 30L45 50L60 30Z;
+        M60 30L45 10L30 30L45 50L60 30Z;
+        M60 30L45 0L30 30L45 60L60 30Z"
+      keyTimes="0;0.1666;0.5;0.6666;1"
+      calcMode="spline"
+      keySplines="
+        0 0 1 1;
+        0 0 1 1;
+        0.42 0 1 1;
+        0 0 0.58 1"
+    />
+  </path>
+</svg>

@@ -1,0 +1,26 @@
+<svg viewBox="1 1 58 58" xmlns="http://www.w3.org/2000/svg">
+  <!-- Верхний левый -->
+  <path d="M21.6662 5H5V21.6661H21.6662V5Z" fill="#002DB7">
+    <animateTransform attributeName="transform" type="rotate" values="0 13.333 13.333;0 13.333 13.333;90 13.333 13.333;90 13.333 13.333;0 13.333 13.333" keyTimes="0;0.25;0.5;0.75;1" dur="3s" repeatCount="indefinite" calcMode="spline" keySplines="0 0 1 1;0.42 0 1 1;0 0 1 1;0 0 0.58 1"></animateTransform>
+  </path>
+
+  <!-- Чёрный центр -->
+  <path d="M38.3324 21.666H21.666V38.3321H38.3324V21.666Z" fill="#002DB7">
+    <animateTransform attributeName="transform" type="rotate" values="0 30 30;0 30 30;45 30 30;45 30 30;0 30 30" keyTimes="0;0.25;0.5;0.75;1" dur="3s" repeatCount="indefinite" calcMode="spline" keySplines="0 0 1 1;0.42 0 1 1;0 0 1 1;0 0 0.58 1"></animateTransform>
+  </path>
+
+  <!-- Нижний левый -->
+  <path d="M21.6662 38.334H5V55.0001H21.6662V38.334Z" fill="#002DB7">
+    <animateTransform attributeName="transform" type="rotate" values="0 13.333 46.667;0 13.333 46.667;90 13.333 46.667;90 13.333 46.667;0 13.333 46.667" keyTimes="0;0.25;0.5;0.75;1" dur="3s" repeatCount="indefinite" calcMode="spline" keySplines="0 0 1 1;0.42 0 1 1;0 0 1 1;0 0 0.58 1"></animateTransform>
+  </path>
+
+  <!-- Верхний правый -->
+  <path d="M55.0003 5H38.334V21.6661H55.0003V5Z" fill="#002DB7">
+    <animateTransform attributeName="transform" type="rotate" values="0 46.667 13.333;0 46.667 13.333;90 46.667 13.333;90 46.667 13.333;0 46.667 13.333" keyTimes="0;0.25;0.5;0.75;1" dur="3s" repeatCount="indefinite" calcMode="spline" keySplines="0 0 1 1;0.42 0 1 1;0 0 1 1;0 0 0.58 1"></animateTransform>
+  </path>
+
+  <!-- Нижний правый -->
+  <path d="M55.0003 38.334H38.334V55.0001H55.0003V38.334Z" fill="#002DB7">
+    <animateTransform attributeName="transform" type="rotate" values="0 46.667 46.667;0 46.667 46.667;90 46.667 46.667;90 46.667 46.667;0 46.667 46.667" keyTimes="0;0.25;0.5;0.75;1" dur="3s" repeatCount="indefinite" calcMode="spline" keySplines="0 0 1 1;0.42 0 1 1;0 0 1 1;0 0 0.58 1"></animateTransform>
+  </path>
+</svg>

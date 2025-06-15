@@ -221,7 +221,7 @@ a {
 }
 @media (max-width: 1279px) {
   .container {
-    padding: 0px 40px;
+    padding: 0px 10px;
   }
 }
 @media (max-width: 767px) {
@@ -787,12 +787,12 @@ a {
 }
 @media (max-width: 1279px) {
   .marquee__inner span {
-    font-size: 80px;
+    font-size: 100px;
   }
 }
 @media (max-width: 767px) {
   .marquee__inner span {
-    font-size: 60px;
+    font-size: 132px;
   }
 }
 .scroll-container {
@@ -1283,5 +1283,113 @@ a {
   }
   .counters ul li p {
     font-size: 18px;
+  }
+}
+
+.section--marquee {
+  position: relative;
+  padding-bottom: 50px;
+}
+.section--marquee .container {
+  position: absolute;
+  left: 50%;
+  top: 0px;
+  transform: translate(-50%, 0%);
+  height: 100%;
+}
+.section--marquee .container:before, .section--marquee .container:after {
+  content: "";
+  position: absolute;
+  width: calc(25% - 12px);
+  height: 100%;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  top: 0px;
+  left: calc(25% + 12px);
+}
+.section--marquee .container:after {
+  left: calc(75% - 12px);
+}
+
+@media (max-width: 1279px) {
+  .section--marquee {
+    padding-bottom: 0px;
+  }
+  .section--marquee .container:before, .section--marquee .container:after {
+    width: calc(25% - 5px);
+    left: calc(25% + 5px);
+  }
+  .section--marquee .container:after {
+    left: calc(75% - 5px);
+  }
+}
+@media (max-width: 767px) {
+  .section--marquee {
+    padding-bottom: 40px;
+  }
+  .section--marquee .container:before, .section--marquee .container:after {
+    width: calc(50% - 20px);
+    left: 20px;
+  }
+  .section--marquee .container:after {
+    width: 20px;
+    left: auto;
+    right: 0px;
+  }
+}
+.benefits {
+  display: flex;
+  position: relative;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: flex-start;
+  align-content: flex-start;
+  margin-top: 30px;
+}
+.benefits li {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  gap: 32px;
+  width: 25%;
+  padding: 24px;
+}
+.benefits li img {
+  width: 60px;
+  height: 60px;
+}
+
+@media (max-width: 1279px) and (min-width: 768px) {
+  .benefits {
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+  .benefits li {
+    gap: 18px;
+    width: 25%;
+    padding: 10px;
+  }
+  .benefits li h2 {
+    font-size: 15px;
+  }
+  .benefits li p {
+    font-size: 12px;
+  }
+  .benefits li img {
+    width: 48px;
+    height: 48px;
+  }
+}
+@media (max-width: 767px) {
+  .benefits {
+    gap: 60px;
+    margin-top: 30px;
+    margin-bottom: 80px;
+  }
+  .benefits li {
+    width: 100%;
+    padding: 0px;
+    gap: 12px;
   }
 }

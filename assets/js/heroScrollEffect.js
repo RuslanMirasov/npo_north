@@ -1,8 +1,6 @@
 import { throttle, debounce } from './helpers.js';
 
 export function initHeroScrollEffect() {
-  if (window.innerWidth < 1024) return;
-
   const heroLight = document.querySelector('[data-hero-light]');
   const heroWrapper = document.querySelector('.hero-wrapper');
   const scrollContainer = document.querySelector('.scroll-container');
@@ -46,6 +44,12 @@ export function initHeroScrollEffect() {
     updateSizes();
     handleScroll(); // применим сразу положение
   }, 150);
+
+  if (window.innerWidth < 1024) {
+    heroLight.style.transform = `translate(${maxTranslateVW}vw, 0%)`;
+    heroWrapper.style.position = 'relative';
+    return;
+  }
 
   // Начальная инициализация
   updateSizes();

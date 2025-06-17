@@ -60,3 +60,36 @@ export const observeCounters = () => {
   window.addEventListener('scroll', onScroll);
   onScroll();
 };
+
+export const observeMapButton = () => {
+  const btn = document.querySelector('[data-fix-button]');
+  let paddingTop = -220;
+
+  if (!btn) return;
+
+  if (window.innerWidth < 768) {
+    btn.classList.remove('fixed');
+    return;
+  }
+
+  if (window.innerWidth < 1280 && window.innerWidth >= 1024) {
+    paddingTop = -130;
+  } else {
+    paddingTop = -100;
+  }
+
+  function onScroll() {
+    const parentPosition = btn.closest('.section').getBoundingClientRect().top;
+    if (parentPosition < 0) {
+      if (parentPosition <= paddingTop) {
+        btn.classList.add('fixed');
+        return;
+      }
+
+      btn.classList.remove('fixed');
+    }
+  }
+
+  window.addEventListener('scroll', onScroll);
+  onScroll();
+};

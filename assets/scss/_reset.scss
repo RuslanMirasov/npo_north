@@ -108,6 +108,10 @@ a {
   }
 }
 
+.blue {
+  color: var(--blue);
+}
+
 .lines {
   &:before,
   &:after {

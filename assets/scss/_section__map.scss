@@ -86,6 +86,7 @@
     position: absolute;
     top: 340px;
     left: 50%;
+    z-index: 2;
 
     &.fixed {
       position: fixed;

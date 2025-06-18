@@ -1692,6 +1692,7 @@ a {
   position: absolute;
   top: 340px;
   left: 50%;
+  z-index: 2;
 }
 .section--map .button.fixed {
   position: fixed;

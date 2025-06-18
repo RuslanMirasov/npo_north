@@ -151,6 +151,9 @@ body {
   overflow-x: hidden;
   overflow-y: auto;
 }
+body.locked {
+  overflow-y: hidden;
+}
 
 img {
   display: block;
@@ -432,7 +435,7 @@ a {
     padding-bottom: 30px;
     width: 100%;
     max-width: 240px;
-    min-height: 100vh;
+    min-height: 100svh;
     flex-wrap: nowrap;
     flex-direction: column;
     justify-content: center;
@@ -823,19 +826,31 @@ a {
   justify-content: center;
   position: relative;
   height: 100vh;
+  min-height: 668px;
   background: #6a6a6a;
+}
+@media (max-width: 767px) {
+  .scroll-container {
+    min-height: 700px;
+  }
 }
 
 .hero-wrapper {
-  position: fixed;
+  position: relative;
   top: 0;
   left: 0;
   width: 100%;
   height: 100vh;
+  min-height: 668px;
 }
 @media (max-width: 1023px) {
   .hero-wrapper {
     position: relative;
+  }
+}
+@media (max-width: 767px) {
+  .hero-wrapper {
+    min-height: 700px;
   }
 }
 
@@ -845,11 +860,16 @@ a {
   flex-direction: column;
   justify-content: flex-end;
   height: 100%;
-  min-height: 100vh;
+  min-height: 668px;
   background: #b0afb0 url("../img/main/hero_sky.webp") no-repeat center top/cover;
   background-size: 100% 60%;
   overflow: hidden;
   color: var(--white);
+}
+@media (max-width: 767px) {
+  .section--hero {
+    min-height: 700px;
+  }
 }
 .section--hero .title--80 {
   display: flex;
@@ -894,7 +914,7 @@ a {
 }
 @media (max-width: 767px) {
   .section--hero .arrow {
-    bottom: 0px;
+    bottom: 10px;
   }
 }
 
@@ -905,7 +925,7 @@ a {
   height: 100%;
   min-height: 100vh;
   width: 50%;
-  transform: translate(0vw, 0%);
+  transform: translate(-20vw, 0%);
   transition: transform 2s cubic-bezier(0, 0.86, 0.07, 1);
 }
 @media (max-width: 1279px) {
@@ -920,8 +940,23 @@ a {
 }
 @media (max-width: 767px) {
   .hero-light {
-    width: 150%;
+    width: 170%;
     left: -80%;
+  }
+}
+
+.animate .hero-light {
+  transform: translate(34vw, 0%);
+  transition: transform 2s ease-in-out;
+}
+@media (max-width: 1023px) {
+  .animate .hero-light {
+    transform: translate(30vw, 0%);
+  }
+}
+@media (max-width: 767px) {
+  .animate .hero-light {
+    transform: translate(30vw, 0%);
   }
 }
 
@@ -945,6 +980,8 @@ a {
 @media (max-width: 767px) {
   .hero-description {
     padding: 20px 0px;
+    height: 48%;
+    padding-bottom: 80px;
   }
 }
 .hero-description .container {
@@ -976,6 +1013,12 @@ a {
   }
   .hero-description .container p br {
     display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .is-safari .hero-description {
+    padding-bottom: 100px;
   }
 }
 
@@ -1679,6 +1722,7 @@ a {
   position: relative;
   width: 100%;
   margin: 0 auto;
+  z-index: 1;
 }
 .map-image:before {
   content: "";
@@ -1692,6 +1736,7 @@ a {
   height: 100%;
   left: 0%;
   top: 0%;
+  transition: opacity 0.3s ease-out 0s, transform 0.3s ease-out 0s;
 }
 .map-image li img {
   width: 100%;
@@ -1700,25 +1745,21 @@ a {
 .map-image li:nth-child(1) {
   transform: translate(0%, -20%);
   opacity: 0;
-  transition: opacity 1s ease-out 0s, transform 1s ease-out 0s;
 }
 .map-image li:nth-child(2) {
   left: 25%;
   transform: translate(0%, -20%);
   opacity: 0;
-  transition: opacity 1s ease-out 0.3s, transform 1s ease-out 0.3s;
 }
 .map-image li:nth-child(3) {
   left: 50%;
   transform: translate(0%, -20%);
   opacity: 0;
-  transition: opacity 1s ease-out 0.6s, transform 1s ease-out 0.6s;
 }
 .map-image li:nth-child(4) {
   left: 75%;
   transform: translate(0%, -20%);
   opacity: 0;
-  transition: opacity 1s ease-out 0.9s, transform 1s ease-out 0.9s;
 }
 .map-image li.pins1, .map-image li.pins2 {
   position: absolute;
@@ -1727,7 +1768,6 @@ a {
   width: 100%;
   height: 100%;
   opacity: 0;
-  transition: opacity 1s ease-out 1.5s;
 }
 .map-image li.pins1 {
   -webkit-animation: bounceUpDown 4s infinite;
@@ -1738,23 +1778,28 @@ a {
           animation: bounceUpDown2 4s infinite;
 }
 .map-image.animate li:nth-child(1) {
+  transition: opacity 1s ease-out 0s, transform 1s ease-out 0s;
   transform: translate(0%, 0%);
   opacity: 1;
 }
 .map-image.animate li:nth-child(2) {
+  transition: opacity 1s ease-out 0.3s, transform 1s ease-out 0.3s;
   transform: translate(0%, 0%);
   opacity: 1;
 }
 .map-image.animate li:nth-child(3) {
+  transition: opacity 1s ease-out 0.6s, transform 1s ease-out 0.6s;
   transform: translate(0%, 0%);
   opacity: 1;
 }
 .map-image.animate li:nth-child(4) {
+  transition: opacity 1s ease-out 0.9s, transform 1s ease-out 0.9s;
   transform: translate(0%, 0%);
   opacity: 1;
 }
 .map-image.animate li.pins1, .map-image.animate li.pins2 {
   opacity: 1;
+  transition: opacity 1s ease-out 1.5s;
 }
 @media (max-width: 767px) {
   .map-image {
@@ -1762,7 +1807,7 @@ a {
     position: absolute;
     width: 100%;
     min-width: 600px;
-    left: -48px;
+    left: -30px;
     bottom: 100px;
   }
 }

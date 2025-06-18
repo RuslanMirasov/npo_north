@@ -113,6 +113,7 @@
   position: relative;
   width: 100%;
   margin: 0 auto;
+  z-index: 1;
 
   &:before {
     content: '';
@@ -127,6 +128,7 @@
     height: 100%;
     left: 0%;
     top: 0%;
+    transition: opacity 0.3s ease-out 0s, transform 0.3s ease-out 0s;
     img {
       width: 100%;
       height: auto;
@@ -134,25 +136,21 @@
     &:nth-child(1) {
       transform: translate(0%, -20%);
       opacity: 0;
-      transition: opacity 1s ease-out 0s, transform 1s ease-out 0s;
     }
     &:nth-child(2) {
       left: 25%;
       transform: translate(0%, -20%);
       opacity: 0;
-      transition: opacity 1s ease-out 0.3s, transform 1s ease-out 0.3s;
     }
     &:nth-child(3) {
       left: 50%;
       transform: translate(0%, -20%);
       opacity: 0;
-      transition: opacity 1s ease-out 0.6s, transform 1s ease-out 0.6s;
     }
     &:nth-child(4) {
       left: 75%;
       transform: translate(0%, -20%);
       opacity: 0;
-      transition: opacity 1s ease-out 0.9s, transform 1s ease-out 0.9s;
     }
     &.pins1,
     &.pins2 {
@@ -162,7 +160,6 @@
       width: 100%;
       height: 100%;
       opacity: 0;
-      transition: opacity 1s ease-out 1.5s;
     }
 
     &.pins1 {
@@ -175,24 +172,29 @@
   &.animate {
     li {
       &:nth-child(1) {
+        transition: opacity 1s ease-out 0s, transform 1s ease-out 0s;
         transform: translate(0%, 0%);
         opacity: 1;
       }
       &:nth-child(2) {
+        transition: opacity 1s ease-out 0.3s, transform 1s ease-out 0.3s;
         transform: translate(0%, 0%);
         opacity: 1;
       }
       &:nth-child(3) {
+        transition: opacity 1s ease-out 0.6s, transform 1s ease-out 0.6s;
         transform: translate(0%, 0%);
         opacity: 1;
       }
       &:nth-child(4) {
+        transition: opacity 1s ease-out 0.9s, transform 1s ease-out 0.9s;
         transform: translate(0%, 0%);
         opacity: 1;
       }
       &.pins1,
       &.pins2 {
         opacity: 1;
+        transition: opacity 1s ease-out 1.5s;
       }
     }
   }
@@ -202,7 +204,7 @@
     position: absolute;
     width: 100%;
     min-width: 600px;
-    left: -48px;
+    left: -30px;
     bottom: 100px;
   }
 }

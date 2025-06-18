@@ -1,9 +1,15 @@
 import { hidePreloader, initNavigationMenu, observeCounters, observeMapButton } from './helpers.js';
 import { initScrollToBlock } from './scrollToBlock.js';
-import { initHeroScrollEffect } from './heroScrollEffect.js';
+//import { initHeroScrollEffect } from './heroScrollEffect.js';
 import { observeAnimations } from './observeAnimations.js';
 
-initHeroScrollEffect();
+const isAndroid = /Android/i.test(navigator.userAgent);
+const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+
+if (isAndroid) document.body.classList.add('is-android');
+if (isSafari) document.body.classList.add('is-safari');
+
+//initHeroScrollEffect();
 initNavigationMenu();
 initScrollToBlock();
 observeCounters();

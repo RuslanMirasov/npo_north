@@ -36,6 +36,7 @@ export const initNavigationMenu = () => {
   const toggleMenu = () => {
     burger.classList.toggle('open');
     menu.classList.toggle('open');
+    document.body.classList.toggle('locked');
   };
 
   burger.addEventListener('click', toggleMenu);
@@ -74,7 +75,7 @@ export const observeMapButton = () => {
 
   if (window.innerWidth < 1280 && window.innerWidth >= 1024) {
     paddingTop = -130;
-  } else {
+  } else if (window.innerWidth < 1023) {
     paddingTop = -100;
   }
 

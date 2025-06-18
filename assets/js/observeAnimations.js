@@ -3,19 +3,27 @@ export function observeAnimations() {
   if (!elements.length || typeof IntersectionObserver === 'undefined') return;
 
   const observer = new IntersectionObserver(
-    (entries, observer) => {
+    entries => {
       entries.forEach(entry => {
+        const el = entry.target;
+        const mode = el.getAttribute('data-animate');
+
         if (entry.isIntersecting) {
-          const el = entry.target;
-          if (!el.classList.contains('animate')) {
-            el.classList.add('animate');
+          el.classList.add('animate');
+
+          if (mode === 'once') {
+            observer.unobserve(el);
           }
-          observer.unobserve(el); // отключаем наблюдение после анимации
+        } else {
+          // Если повторяемая — убираем класс при выходе
+          if (mode === 'repeat') {
+            el.classList.remove('animate');
+          }
         }
       });
     },
     {
-      threshold: 0.3, // когда 10% элемента видно
+      threshold: 0.2,
     }
   );
 

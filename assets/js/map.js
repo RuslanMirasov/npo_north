@@ -24,7 +24,7 @@ function init() {
   const placemark = new ymaps.Placemark(
     [55.625669, 37.675729],
     {
-      balloonContent: 'Адрес здесь', // можно заменить на нужный текст
+      balloonContent: '115304, г. Москва, ул. Каспийская, д. 22, стр. 5, корп. 1', // можно заменить на нужный текст
     },
     {
       iconLayout: 'default#image',

@@ -1,14 +1,14 @@
 :root {
   --400: 'wix_madefor_display_regular', sans-serif;
   --500: 'wix_madefor_display_medium', sans-serif;
-
+  --700: 'wix_madefor_display_bold', sans-serif;
   --bg: #ffffff;
   --white: #ffffff;
   --blue: #002db7;
   --blue-light: #0080ff;
+  --grey: #b6ada9;
   --grey-light: #f2f2f2;
   --black: #231f20;
-
   --red: #b7142b;
 }
 
@@ -30,3 +30,4 @@
 @import 'section__adventages';
 @import 'section__map';
 @import 'section__yandex';
+@import 'section__vacancies';

@@ -1,4 +1,4 @@
-import { hidePreloader, initNavigationMenu, observeCounters, observeMapButton } from './helpers.js';
+import { hidePreloader, initNavigationMenu, observeCounters, observeMapButton, initAccordeons } from './helpers.js';
 import { initScrollToBlock } from './scrollToBlock.js';
 //import { initHeroScrollEffect } from './heroScrollEffect.js';
 import { observeAnimations } from './observeAnimations.js';
@@ -15,4 +15,5 @@ initScrollToBlock();
 observeCounters();
 observeMapButton();
 observeAnimations();
+initAccordeons();
 hidePreloader();

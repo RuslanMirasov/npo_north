@@ -50,6 +50,18 @@
     top: 0%;
     margin-bottom: 30px;
   }
+
+  &.relative {
+    position: relative;
+    width: 44.32%;
+    left: 0px;
+    &:before {
+      padding-top: 63.69%;
+    }
+    &:after {
+      content: none;
+    }
+  }
 }
 
 .about {

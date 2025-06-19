@@ -119,3 +119,18 @@
     transform: translate(0%, 50%);
   }
 }
+
+.load-more {
+  font-size: 15px;
+  height: 48px;
+  width: 100%;
+  background: none;
+  color: var(--black);
+  border: 1px solid #dcd8d6;
+  border-radius: 48px;
+  transition: border 0.5s, color 0.5s;
+  &:hover {
+    color: var(--blue-light);
+    border: 1px solid var(--blue-light);
+  }
+}

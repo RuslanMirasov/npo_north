@@ -36,7 +36,9 @@ export const initNavigationMenu = () => {
   const toggleMenu = () => {
     burger.classList.toggle('open');
     menu.classList.toggle('open');
-    document.body.classList.toggle('locked');
+    if (window.innerWidth <= 767) {
+      document.body.classList.toggle('locked');
+    }
   };
 
   burger.addEventListener('click', toggleMenu);

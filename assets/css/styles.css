@@ -1812,6 +1812,188 @@ a {
   -webkit-animation: bounceUpDown2 4s infinite;
           animation: bounceUpDown2 4s infinite;
 }
+.map-image li.adresses {
+  display: block;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+}
+.map-image li.adresses > span {
+  display: inline-flex;
+  position: absolute;
+  justify-content: center;
+  align-items: flex-end;
+  align-content: flex-end;
+  left: 0px;
+  top: 0px;
+  width: 1.7361%;
+  height: auto;
+  background: none;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+.map-image li.adresses > span.adresse-1 {
+  left: 10.555555%;
+  top: 31.826086%;
+}
+.map-image li.adresses > span.adresse-2 {
+  left: 14.791666%;
+  top: 35.565217%;
+}
+.map-image li.adresses > span.adresse-3 {
+  left: 16.875%;
+  top: 38.347826%;
+}
+.map-image li.adresses > span.adresse-4 {
+  left: 18.958333%;
+  top: 31.73913%;
+}
+.map-image li.adresses > span.adresse-5 {
+  left: 22.152777%;
+  top: 43.565217%;
+}
+.map-image li.adresses > span.adresse-6 {
+  left: 23.263888%;
+  top: 29.217391%;
+}
+.map-image li.adresses > span.adresse-7 {
+  left: 24.2361111111%;
+  top: 40.8695652174%;
+}
+.map-image li.adresses > span.adresse-8 {
+  left: 26.3194444444%;
+  top: 37.0434782609%;
+}
+.map-image li.adresses > span.adresse-9 {
+  left: 33.75%;
+  top: 31.8260869565%;
+}
+.map-image li.adresses > span.adresse-10 {
+  left: 36.875%;
+  top: 33.0434782609%;
+}
+.map-image li.adresses > span.adresse-11 {
+  left: 46.3888888889%;
+  top: 68.6086956522%;
+}
+.map-image li.adresses > span.adresse-12 {
+  left: 49.5138888889%;
+  top: 60.6956521739%;
+}
+.map-image li.adresses > span.adresse-13 {
+  left: 51.6666666667%;
+  top: 56.6956521739%;
+}
+.map-image li.adresses > span.adresse-14 {
+  left: 55.8333333333%;
+  top: 75.0434782609%;
+}
+.map-image li.adresses > span.adresse-15 {
+  left: 57.8472222222%;
+  top: 71.1304347826%;
+}
+.map-image li.adresses > span.adresse-16 {
+  left: 58.9583333333%;
+  top: 80.2608695652%;
+}
+.map-image li.adresses > span.adresse-17 {
+  left: 59.0277777778%;
+  top: 67.3043478261%;
+}
+.map-image li.adresses > span.adresse-18 {
+  left: 60.0694444444%;
+  top: 75.2173913043%;
+}
+.map-image li.adresses > span.adresse-19 {
+  left: 61.1111111111%;
+  top: 56.6956521739%;
+}
+.map-image li.adresses > span.adresse-20 {
+  left: 62.1527777778%;
+  top: 71.2173913043%;
+}
+.map-image li.adresses > span:before {
+  content: "";
+  display: block;
+  width: 100%;
+  padding-top: 440%;
+}
+.map-image li.adresses > span:after {
+  content: "";
+  opacity: 0;
+  transition: 0.4s;
+  width: 20px;
+  height: 20px;
+  background: #fff;
+  position: absolute;
+  bottom: 100%;
+  transform: rotate(45deg) translate(-8px, -8px);
+  pointer-events: none;
+}
+.map-image li.adresses > span a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  gap: 5px;
+  position: absolute;
+  bottom: calc(100% + 20px);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  width: 240px;
+  min-height: 120px;
+  background: var(--white);
+  padding: 20px 15px;
+  border-radius: 20px;
+  transition: 0.4s;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+  transform: translate(0px, 20px);
+}
+.map-image li.adresses > span a span {
+  display: block;
+  position: relative;
+  font-size: 18px;
+  line-height: 1.2;
+  text-align: center;
+}
+.map-image li.adresses > span a span:before {
+  content: "";
+  display: block;
+  position: relative;
+  width: 40px;
+  height: 40px;
+  margin: 0 auto;
+  background: url("../img/pic.webp") no-repeat center center/cover;
+  margin-bottom: 6px;
+}
+.map-image li.adresses > span a span:after {
+  content: "";
+  display: block;
+  position: relative;
+  width: 27px;
+  height: 18px;
+  margin: 0 auto;
+  background: url("../img/svg/look.svg") no-repeat center center/cover;
+  margin-top: 16px;
+}
+.map-image li.adresses > span a:hover span:after {
+  background: url("../img/svg/look-hover.svg") no-repeat center center/cover;
+}
+.map-image li.adresses > span.active {
+  z-index: 2;
+}
+.map-image li.adresses > span.active:after {
+  opacity: 1;
+}
+.map-image li.adresses > span.active a {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(0px, 0px);
+}
 .map-image.animate li:nth-child(1) {
   transition: opacity 1s ease-out 0s, transform 1s ease-out 0s;
   transform: translate(0%, 0%);

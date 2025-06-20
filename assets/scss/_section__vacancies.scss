@@ -80,11 +80,13 @@
     border: none;
     outline: none;
     text-align: right;
-    padding-right: 5px;
     font-family: var(--400);
     font-weight: 400;
     font-size: 15px;
     line-height: 18px;
+    option {
+      padding: 20px;
+    }
   }
 }
 

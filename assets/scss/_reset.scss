@@ -134,7 +134,7 @@ a {
   }
 
   &:after {
-    width: 50%;
+    width: calc(50% - 24px);
     max-width: calc((1440px - 48px) / 2);
     left: 50%;
     transform: translate(-50%, 0%);
@@ -144,7 +144,7 @@ a {
 
   @media (max-width: 1279px) {
     &:after {
-      width: calc(50% - 12px);
+      width: calc(50% - 10px);
       max-width: calc((1440px - 48px) / 2);
     }
   }

@@ -259,7 +259,7 @@ a {
   background: var(--grey-light);
 }
 .lines:after {
-  width: 50%;
+  width: calc(50% - 24px);
   max-width: 696px;
   left: 50%;
   transform: translate(-50%, 0%);
@@ -268,7 +268,7 @@ a {
 }
 @media (max-width: 1279px) {
   .lines:after {
-    width: calc(50% - 12px);
+    width: calc(50% - 10px);
     max-width: 696px;
   }
 }
@@ -2431,11 +2431,13 @@ a {
   border: none;
   outline: none;
   text-align: right;
-  padding-right: 5px;
   font-family: var(--400);
   font-weight: 400;
   font-size: 15px;
   line-height: 18px;
+}
+.vacancies-filter select option {
+  padding: 20px;
 }
 
 .vacancies {

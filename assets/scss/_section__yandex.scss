@@ -9,6 +9,7 @@
   height: 100%;
   min-height: 100svh;
   background: var(--grey-light);
+  padding: 0;
   @media (max-width: 1599px) {
     justify-content: flex-start;
   }

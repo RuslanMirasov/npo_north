@@ -901,6 +901,7 @@ a {
   background-size: 100% 60%;
   overflow: hidden;
   color: var(--white);
+  padding: 0;
 }
 @media (max-width: 767px) {
   .section--hero {
@@ -1966,6 +1967,11 @@ a {
   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
   transform: translate(0px, 20px);
 }
+.map-image li.adresses > span a img {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 6px;
+}
 .map-image li.adresses > span a span {
   display: block;
   position: relative;
@@ -2220,6 +2226,7 @@ a {
   height: 100%;
   min-height: 100svh;
   background: var(--grey-light);
+  padding: 0;
 }
 @media (max-width: 1599px) {
   .section--yandexMap {
@@ -2818,8 +2825,8 @@ a {
   font-weight: 500;
 }
 .projects li img {
-  width: 100px;
-  height: 100px;
+  width: 80px;
+  height: 80px;
   position: absolute;
   left: 10%;
 }
@@ -2903,5 +2910,163 @@ a {
   .projects li img {
     position: relative;
     left: 0%;
+  }
+}
+.section--project .title--90 {
+  display: flex;
+  position: relative;
+  width: 100%;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
+  gap: 32px;
+  margin-top: 32px;
+  -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
+  word-wrap: break-word;
+}
+.section--project .title--90 img {
+  width: 80px;
+  height: 80px;
+  position: relative;
+}
+.section--project .buttons {
+  display: flex;
+  position: relative;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  margin-top: 74px;
+}
+
+.project {
+  display: flex;
+  position: relative;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+  gap: 24px;
+  margin-top: 70px;
+}
+.project .project__item {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  gap: 20px;
+  width: calc(50% - 12px);
+  order: 1;
+}
+.project .project__item:first-child p {
+  font-size: 16px;
+  display: block;
+  max-width: 444px;
+  margin: 0 auto;
+}
+.project p {
+  font-size: 14px;
+  line-height: 1.6;
+}
+.project img {
+  max-width: 100%;
+  gap: 24px;
+}
+.project ol {
+  padding-left: 20px;
+}
+.project ol li {
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 4px 0px;
+}
+.project h2,
+.project h3,
+.project h4,
+.project h5,
+.project h6 {
+  font-size: 24px;
+  line-height: 1.4;
+  font-family: var(--400);
+  font-weight: 400;
+}
+
+@media (max-width: 1279px) {
+  .section--project .title--90 img {
+    width: 70px;
+    height: 70px;
+  }
+  .project {
+    margin-top: 50px;
+  }
+  .project .project__item {
+    gap: 24px;
+    width: 100%;
+  }
+  .project .project__item.project__item--lastImage {
+    order: 2;
+  }
+  .project .project__item:first-child p {
+    font-size: 16px;
+    max-width: 100%;
+  }
+  .project p {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  .project img {
+    max-width: 100%;
+    gap: 24px;
+  }
+  .project ol {
+    padding-left: 20px;
+  }
+  .project ol li {
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 4px 0px;
+  }
+  .project h2,
+.project h3,
+.project h4,
+.project h5,
+.project h6 {
+    font-size: 24px;
+    line-height: 1.4;
+    font-family: var(--400);
+    font-weight: 400;
+  }
+}
+@media (max-width: 767px) {
+  .section--project {
+    padding-bottom: 80px;
+  }
+  .section--project .title--90 {
+    display: inline-block;
+    margin-top: 0px;
+  }
+  .section--project .title--90 img {
+    margin-bottom: 20px;
+    width: 80px;
+    height: 80px;
+  }
+  .section--project .buttons {
+    margin-top: 40px;
+  }
+  .project .project__item {
+    position: relative;
+  }
+  .project .project__item img {
+    display: block;
+    position: relative;
+    width: calc(100% + 40px);
+    max-width: calc(100% + 40px);
+    left: -20px;
+  }
+  .project .project__item.project__item--lastImage {
+    margin-top: 30px;
   }
 }

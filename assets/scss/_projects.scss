@@ -1,0 +1,134 @@
+.projects {
+  counter-reset: num;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 50px;
+
+  li {
+    display: flex;
+    position: relative;
+    width: 100%;
+    min-height: 128px;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+    counter-increment: num;
+    border-top: 1px solid var(--grey-dark);
+    &:before {
+      content: counter(num, decimal-leading-zero);
+      position: absolute;
+      left: 0;
+    }
+
+    a,
+    &:before {
+      font-size: 36px;
+      line-height: 1.2;
+      font-family: var(--500);
+      font-weight: 500;
+    }
+
+    img {
+      width: 100px;
+      height: 100px;
+      position: absolute;
+      left: 10%;
+    }
+
+    a {
+      display: block;
+      width: 100%;
+      height: 100%;
+      z-index: 2;
+      color: var(--black);
+      padding: 20px 0px;
+      padding-left: calc(25% + 24px);
+      padding-right: 30px;
+
+      &:after {
+        content: '';
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        width: 100%;
+        height: 100%;
+        background: url('../img/svg/look.svg') no-repeat right center;
+        background-size: 31px 21px;
+      }
+
+      &:hover {
+        color: var(--blue);
+        &:after {
+          background: url('../img/svg/look-hover.svg') no-repeat right center;
+          background-size: 31px 21px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1279px) {
+  .section--projects {
+    &:before,
+    &:after {
+      content: none;
+    }
+  }
+  .projects {
+    margin-top: 20px;
+
+    li {
+      min-height: 128px;
+
+      a,
+      &:before {
+        font-size: 32px;
+      }
+
+      img {
+        left: 8%;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .projects {
+    margin-top: 40px;
+    padding-bottom: 40px;
+    li {
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 20px 0px 60px 0px;
+      a {
+        font-size: 24px;
+        padding: 0px;
+        &:after {
+          height: calc(100% - 20px);
+          background: url('../img/svg/look.svg') no-repeat right bottom;
+          background-size: 31px 21px;
+        }
+
+        &:hover {
+          color: var(--blue);
+          &:after {
+            background: url('../img/svg/look-hover.svg') no-repeat right bottom;
+            background-size: 31px 21px;
+          }
+        }
+      }
+      &:before {
+        position: relative;
+        font-size: 36px;
+      }
+
+      img {
+        position: relative;
+        left: 0%;
+      }
+    }
+  }
+}

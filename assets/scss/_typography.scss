@@ -12,6 +12,14 @@
     }
   }
 
+  &.title--90 {
+    font-size: myclamp(46px, 90px, 1440px, 1440px);
+    line-height: 1.2;
+    @media (max-width: 767px) {
+      line-height: 1.1;
+    }
+  }
+
   &.title--100 {
     font-size: myclamp(50px, 100px, 1440px, 1440px);
     line-height: 1.2;

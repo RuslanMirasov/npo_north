@@ -1,6 +1,5 @@
 .section--vacancies {
   overflow: visible;
-  padding-bottom: 40px;
   padding-top: myclamp(100px, 200px, 1440px, 1440px);
 }
 
@@ -113,6 +112,7 @@
       line-height: 1;
     }
     a {
+      width: 100%;
       margin-top: 24px;
       &.phone {
         display: inline-block;
@@ -348,7 +348,7 @@
   }
 
   .vacancies-hero__image {
-    width: 48%;
+    width: 46%;
     position: relative;
     left: -10px;
     float: none;
@@ -364,13 +364,112 @@
   }
 
   .vacancies-hero__list {
+    width: calc(50% + 24px);
+    float: none;
+    order: 4;
+    padding-right: 0px;
+    margin-left: auto;
+    margin-top: 14px;
+    .list {
+      max-width: 393px;
+    }
+    &.vacancies-hero__list--last {
+      order: 3;
+      margin-top: 0px;
+    }
+  }
+
+  .vacancies {
+    margin-top: -160px;
+    .vacancies__sidebar {
+      position: relative;
+      top: 0px;
+      bottom: 0px;
+      width: calc(46% - 10px);
+      order: 1;
+      margin-top: 0px;
+      margin-bottom: -40px;
+    }
+
+    .vacancies__content {
+      width: 100%;
+      order: 2;
+    }
+  }
+}
+
+@media (max-width: 799px) {
+  .vacancies {
+    margin-top: -170px;
+  }
+}
+
+@media (max-width: 768px) {
+  .vacancies {
+    margin-top: -170px;
+  }
+
+  .vacancies-hero__image {
+    position: relative;
+    width: 100%;
+    left: 0px;
+    order: 3;
+    margin: 32px 0px;
+    img {
+      width: calc(100% + 40px);
+      position: relative;
+      left: -20px;
+    }
+  }
+
+  .vacancies-hero__title {
+    order: 1;
+    margin-top: 20px;
+    margin-bottom: 24px;
     width: 100%;
     float: none;
-    order: 3;
-    padding-right: 30px;
-    margin-top: 14px;
-    &:nth-child(1) {
-      order: 4;
+  }
+
+  .vacancies-hero__list {
+    width: 100%;
+    order: 4;
+    padding-right: 0px;
+    margin-left: auto;
+    margin-top: 0px;
+    &.vacancies-hero__list--last {
+      order: 2;
     }
+  }
+
+  .vacancies {
+    margin-top: 60px;
+    padding-bottom: 60px;
+
+    .vacancies__sidebar {
+      width: 100%;
+      max-width: 375px;
+      margin-bottom: 32px;
+    }
+
+    .vacancies__content {
+      width: 100%;
+      order: 2;
+    }
+  }
+
+  .vacancies-filter {
+    margin-bottom: -10px;
+  }
+
+  .accordeon footer {
+    padding-top: 24px;
+    display: flex;
+    position: relative;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: flex-end;
+    align-content: flex-end;
+    gap: 24px;
   }
 }

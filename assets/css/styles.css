@@ -9,6 +9,7 @@
   --blue-light: #0080ff;
   --grey: #b6ada9;
   --grey-light: #f2f2f2;
+  --grey-dark: rgba(35, 31, 32, 0.6);
   --black: #231f20;
   --red: #b7142b;
 }
@@ -215,6 +216,7 @@ a {
   overflow: hidden;
   width: 100%;
   background: var(--white);
+  padding-top: clamp(126px, 10.4167vw, 150px);
 }
 .section.full {
   min-height: 100vh;
@@ -629,6 +631,7 @@ a {
   width: 100%;
   background: none;
   color: var(--black);
+  background: #fff;
   border: 1px solid #dcd8d6;
   border-radius: 48px;
   transition: border 0.5s, color 0.5s;
@@ -650,6 +653,15 @@ a {
 @media (max-width: 767px) {
   .title.title--80 {
     font-size: clamp(38px, 8.0834vw, 62px);
+  }
+}
+.title.title--90 {
+  font-size: clamp(46px, 6.25vw, 90px);
+  line-height: 1.2;
+}
+@media (max-width: 767px) {
+  .title.title--90 {
+    line-height: 1.1;
   }
 }
 .title.title--100 {
@@ -1961,16 +1973,6 @@ a {
   line-height: 1.2;
   text-align: center;
 }
-.map-image li.adresses > span a span:before {
-  content: "";
-  display: block;
-  position: relative;
-  width: 40px;
-  height: 40px;
-  margin: 0 auto;
-  background: url("../img/pic.webp") no-repeat center center/cover;
-  margin-bottom: 6px;
-}
 .map-image li.adresses > span a span:after {
   content: "";
   display: block;
@@ -2356,7 +2358,6 @@ a {
 
 .section--vacancies {
   overflow: visible;
-  padding-bottom: 40px;
   padding-top: clamp(100px, 13.8889vw, 200px);
 }
 
@@ -2468,6 +2469,7 @@ a {
   line-height: 1;
 }
 .vacancies .vacancies__sidebar a {
+  width: 100%;
   margin-top: 24px;
 }
 .vacancies .vacancies__sidebar a.phone {
@@ -2675,7 +2677,7 @@ a {
     flex-wrap: wrap;
   }
   .vacancies-hero__image {
-    width: 48%;
+    width: 46%;
     position: relative;
     left: -10px;
     float: none;
@@ -2689,13 +2691,217 @@ a {
     float: none;
   }
   .vacancies-hero__list {
-    width: 100%;
+    width: calc(50% + 24px);
     float: none;
-    order: 3;
-    padding-right: 30px;
+    order: 4;
+    padding-right: 0px;
+    margin-left: auto;
     margin-top: 14px;
   }
-  .vacancies-hero__list:nth-child(1) {
+  .vacancies-hero__list .list {
+    max-width: 393px;
+  }
+  .vacancies-hero__list.vacancies-hero__list--last {
+    order: 3;
+    margin-top: 0px;
+  }
+  .vacancies {
+    margin-top: -160px;
+  }
+  .vacancies .vacancies__sidebar {
+    position: relative;
+    top: 0px;
+    bottom: 0px;
+    width: calc(46% - 10px);
+    order: 1;
+    margin-top: 0px;
+    margin-bottom: -40px;
+  }
+  .vacancies .vacancies__content {
+    width: 100%;
+    order: 2;
+  }
+}
+@media (max-width: 799px) {
+  .vacancies {
+    margin-top: -170px;
+  }
+}
+@media (max-width: 768px) {
+  .vacancies {
+    margin-top: -170px;
+  }
+  .vacancies-hero__image {
+    position: relative;
+    width: 100%;
+    left: 0px;
+    order: 3;
+    margin: 32px 0px;
+  }
+  .vacancies-hero__image img {
+    width: calc(100% + 40px);
+    position: relative;
+    left: -20px;
+  }
+  .vacancies-hero__title {
+    order: 1;
+    margin-top: 20px;
+    margin-bottom: 24px;
+    width: 100%;
+    float: none;
+  }
+  .vacancies-hero__list {
+    width: 100%;
     order: 4;
+    padding-right: 0px;
+    margin-left: auto;
+    margin-top: 0px;
+  }
+  .vacancies-hero__list.vacancies-hero__list--last {
+    order: 2;
+  }
+  .vacancies {
+    margin-top: 60px;
+    padding-bottom: 60px;
+  }
+  .vacancies .vacancies__sidebar {
+    width: 100%;
+    max-width: 375px;
+    margin-bottom: 32px;
+  }
+  .vacancies .vacancies__content {
+    width: 100%;
+    order: 2;
+  }
+  .vacancies-filter {
+    margin-bottom: -10px;
+  }
+  .accordeon footer {
+    padding-top: 24px;
+    display: flex;
+    position: relative;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: flex-end;
+    align-content: flex-end;
+    gap: 24px;
+  }
+}
+.projects {
+  counter-reset: num;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 50px;
+}
+.projects li {
+  display: flex;
+  position: relative;
+  width: 100%;
+  min-height: 128px;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
+  counter-increment: num;
+  border-top: 1px solid var(--grey-dark);
+}
+.projects li:before {
+  content: counter(num, decimal-leading-zero);
+  position: absolute;
+  left: 0;
+}
+.projects li a, .projects li:before {
+  font-size: 36px;
+  line-height: 1.2;
+  font-family: var(--500);
+  font-weight: 500;
+}
+.projects li img {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  left: 10%;
+}
+.projects li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  color: var(--black);
+  padding: 20px 0px;
+  padding-left: calc(25% + 24px);
+  padding-right: 30px;
+}
+.projects li a:after {
+  content: "";
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  background: url("../img/svg/look.svg") no-repeat right center;
+  background-size: 31px 21px;
+}
+.projects li a:hover {
+  color: var(--blue);
+}
+.projects li a:hover:after {
+  background: url("../img/svg/look-hover.svg") no-repeat right center;
+  background-size: 31px 21px;
+}
+
+@media (max-width: 1279px) {
+  .section--projects:before, .section--projects:after {
+    content: none;
+  }
+  .projects {
+    margin-top: 20px;
+  }
+  .projects li {
+    min-height: 128px;
+  }
+  .projects li a, .projects li:before {
+    font-size: 32px;
+  }
+  .projects li img {
+    left: 8%;
+  }
+}
+@media (max-width: 767px) {
+  .projects {
+    margin-top: 40px;
+    padding-bottom: 40px;
+  }
+  .projects li {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 20px 0px 60px 0px;
+  }
+  .projects li a {
+    font-size: 24px;
+    padding: 0px;
+  }
+  .projects li a:after {
+    height: calc(100% - 20px);
+    background: url("../img/svg/look.svg") no-repeat right bottom;
+    background-size: 31px 21px;
+  }
+  .projects li a:hover {
+    color: var(--blue);
+  }
+  .projects li a:hover:after {
+    background: url("../img/svg/look-hover.svg") no-repeat right bottom;
+    background-size: 31px 21px;
+  }
+  .projects li:before {
+    position: relative;
+    font-size: 36px;
+  }
+  .projects li img {
+    position: relative;
+    left: 0%;
   }
 }

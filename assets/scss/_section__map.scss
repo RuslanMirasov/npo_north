@@ -337,16 +337,6 @@
             font-size: 18px;
             line-height: 1.2;
             text-align: center;
-            &:before {
-              content: '';
-              display: block;
-              position: relative;
-              width: 40px;
-              height: 40px;
-              margin: 0 auto;
-              background: url('../img/pic.webp') no-repeat center center/cover;
-              margin-bottom: 6px;
-            }
             &:after {
               content: '';
               display: block;

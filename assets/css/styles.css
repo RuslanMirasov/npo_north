@@ -1299,6 +1299,7 @@ a {
   }
   .section--counters:before {
     height: 100svh;
+    background: url("../img/main/oil_bg.webp") no-repeat 28% top/cover;
   }
 }
 

@@ -2,7 +2,7 @@ ymaps.ready(init);
 
 function init() {
   const zoom = window.innerWidth <= 767 ? 16 : 17;
-  const center = window.innerWidth <= 767 ? [55.626364, 37.675713] : [55.626029, 37.673639];
+  const center = window.innerWidth <= 767 ? [55.624891, 37.675697] : [55.626029, 37.673639];
 
   const map = new ymaps.Map(
     'map',
@@ -14,7 +14,7 @@ function init() {
     {
       zoomControlPosition: {
         right: 10,
-        bottom: 10,
+        bottom: window.innerWidth <= 767 ? 300 : 30,
       },
     }
   );

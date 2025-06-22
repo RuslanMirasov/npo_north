@@ -1,0 +1,218 @@
+.text {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  align-content: flex-start;
+  flex-shrink: 0;
+  gap: 14px;
+  @media (max-width: 767px) {
+    gap: 20px;
+  }
+
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-size: 24px;
+    font-family: var(--400);
+    font-weight: 400;
+    line-height: 1.25;
+  }
+  .list {
+    margin-top: -10px;
+  }
+}
+
+.section--decisions {
+  background: var(--blue);
+  color: var(--white);
+  padding: 40px 0px;
+  @media (max-width: 767px) {
+    padding: 60px 0px;
+  }
+  .list {
+    li:before {
+      background: var(--white);
+    }
+  }
+
+  .container {
+    z-index: 5;
+  }
+}
+
+.decisions {
+  display: flex;
+  position: relative;
+  width: 100%;
+  justify-content: flex-start;
+  align-items: flex-end;
+  align-content: flex-end;
+  gap: 50px;
+  margin-top: 40px;
+  @media (max-width: 767px) {
+    margin-top: 20px;
+  }
+
+  .text {
+    display: flex;
+    position: static;
+    width: 48.204%;
+    flex-shrink: 0;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-content: flex-start;
+    gap: 14px;
+    @media (max-width: 767px) {
+      width: 100%;
+      gap: 20px;
+    }
+
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-size: 24px;
+      font-family: var(--400);
+      font-weight: 400;
+      line-height: 1.25;
+    }
+    .list {
+      margin-top: -10px;
+    }
+    .decisions__image {
+      position: absolute;
+      right: 0px;
+      bottom: 0px;
+      width: 48.204%;
+      min-height: 500px;
+      object-fit: cover;
+      @media (max-width: 1279px) {
+        bottom: auto;
+        top: 0px;
+      }
+      @media (max-width: 767px) {
+        position: relative;
+        width: 100%;
+        min-height: 50px;
+        margin: 10px 0px;
+      }
+    }
+  }
+}
+
+.animated-bg {
+  display: flex;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  overflow: hidden;
+  &:before {
+    content: '';
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    background: url('../img/noise.webp') repeat-y left top;
+    background-size: 100% auto;
+    z-index: 4;
+    opacity: 0.3;
+  }
+
+  .gradient {
+    display: block;
+    position: absolute;
+    width: 2160px;
+    height: 1540px;
+    z-index: 3;
+
+    transform: translate(0%, 0&) rotate(0deg);
+    &.gradient--1 {
+      opacity: 0.8;
+      background: url('../img/gradient1.png') no-repeat center center/cover;
+      animation: grad1 10s linear infinite;
+    }
+    &.gradient--2 {
+      opacity: 1;
+      background: url('../img/gradient2.png') no-repeat center center/cover;
+      animation: grad2 10s linear infinite;
+    }
+    &.gradient--3 {
+      background: url('../img/gradient3.png') no-repeat center center/cover;
+      animation: grad3 10s linear infinite;
+    }
+  }
+}
+
+@keyframes grad3 {
+  0% {
+    transform: translate(0%, 0%) rotate(0deg);
+    opacity: 1;
+  }
+  33% {
+    transform: translate(-20%, 0%) rotate(60deg);
+    opacity: 0.6;
+  }
+
+  66% {
+    transform: translate(10%, 0%) rotate(120deg);
+    opacity: 0.6;
+  }
+
+  100% {
+    transform: translate(0%, 0%) rotate(0deg);
+    opacity: 1;
+  }
+}
+
+@keyframes grad2 {
+  0% {
+    transform: translate(0%, 0%) rotate(0deg);
+    opacity: 0.8;
+  }
+  33% {
+    transform: translate(-30%, 10%) rotate(100deg);
+    opacity: 0.3;
+  }
+
+  66% {
+    transform: translate(30%, 15%) rotate(200deg);
+    opacity: 0.5;
+  }
+
+  100% {
+    transform: translate(0%, 0%) rotate(360deg);
+    opacity: 0.8;
+  }
+}
+
+@keyframes grad1 {
+  0% {
+    transform: translate(0%, 0%) rotate(0deg);
+    opacity: 0.7;
+  }
+  33% {
+    transform: translate(0%, 5%) rotate(-100deg);
+    opacity: 0.5;
+  }
+
+  66% {
+    transform: translate(-5%, 15%) rotate(-230deg);
+    opacity: 0.3;
+  }
+
+  100% {
+    transform: translate(0%, 0%) rotate(-360deg);
+    opacity: 0.7;
+  }
+}

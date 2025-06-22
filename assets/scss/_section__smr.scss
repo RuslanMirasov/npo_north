@@ -1,0 +1,149 @@
+.section--smr {
+  padding: 80px 0px 50px 0px;
+  @media (max-width: 767px) {
+    padding: 50px 0px 90px 0px;
+  }
+}
+
+.smr {
+  display: flex;
+  position: relative;
+  width: 100%;
+  flex-wrap: wrap;
+  gap: 24px;
+  @media (max-width: 767px) {
+    gap: 20px;
+  }
+}
+
+.smr__item {
+  display: flex;
+  position: relative;
+  width: 100%;
+  gap: 24px;
+  z-index: 1;
+  @media (max-width: 767px) {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .text {
+    width: calc(25% - 24px);
+    flex-shrink: 0;
+    padding-right: 24px;
+
+    @media (max-width: 1279px) {
+      width: calc(50% - 24px);
+    }
+    @media (max-width: 767px) {
+      width: 100%;
+      order: 1;
+    }
+  }
+
+  .image {
+    display: block;
+    max-width: 100%;
+    flex: 1;
+    @media (max-width: 767px) {
+      order: 2;
+    }
+    img {
+      display: block;
+      width: 100%;
+      object-fit: cover;
+
+      &.icon {
+        position: absolute;
+        right: 0px;
+        bottom: 0px;
+        width: 140px;
+        height: 140px;
+      }
+    }
+  }
+
+  &:first-child {
+    z-index: 2;
+    .icon {
+      position: absolute;
+      right: auto;
+      left: 25%;
+      bottom: -12px;
+      transform: translate(-50%, 50%);
+      width: 200px;
+      height: 200px;
+    }
+  }
+}
+
+@media (max-width: 1279px) {
+  .smr__item {
+    align-items: flex-start;
+    align-content: flex-start;
+    &:nth-child(1),
+    &:nth-child(2) {
+      .image {
+        position: relative;
+        margin-bottom: 60px;
+        img {
+          width: calc(100% + 10px);
+          position: relative;
+          left: -10px;
+          &.icon {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            left: 2%;
+            bottom: 0px;
+            transform: translate(0%, 50%);
+          }
+        }
+      }
+    }
+    &:nth-child(1) {
+      .image {
+        img {
+          left: 0px;
+          &.icon {
+            left: auto;
+            right: 2%;
+            bottom: 0px;
+            transform: translate(0%, 50%);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .smr__item {
+    &.swiper {
+      float: left;
+      width: 60%;
+      left: -20%;
+      overflow: visible;
+      margin-right: auto;
+    }
+    &:nth-child(1),
+    &:nth-child(2) {
+      .image {
+        margin-top: 10px;
+        img {
+          width: calc(100% + 40px);
+          position: relative;
+          left: -20px;
+        }
+      }
+    }
+    &:nth-child(1) {
+      .image {
+        img {
+          left: 0px;
+          width: 100%;
+        }
+      }
+    }
+  }
+}

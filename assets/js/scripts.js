@@ -3,6 +3,7 @@ import { initScrollToBlock } from './scrollToBlock.js';
 //import { initHeroScrollEffect } from './heroScrollEffect.js';
 import { observeAnimations } from './observeAnimations.js';
 import { initPicsPositions, initPicsClick } from './pic.js';
+import { initSliders } from './sliders.js';
 
 const isAndroid = /Android/i.test(navigator.userAgent);
 const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
@@ -19,4 +20,5 @@ observeAnimations();
 initAccordeons();
 initPicsPositions();
 initPicsClick();
+initSliders();
 hidePreloader();

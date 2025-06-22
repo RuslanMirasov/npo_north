@@ -1,0 +1,140 @@
+.section--projection {
+  padding: 0;
+  height: 100svh;
+  position: relative;
+}
+
+.projection {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: var(--blue);
+  .swiper-slide {
+    height: 100%;
+    picture {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      width: 100%;
+      height: 100%;
+      background: #002cb4;
+      background: linear-gradient(90deg, rgba(0, 44, 180, 1) 0%, rgba(0, 45, 183, 0) 100%);
+      z-index: 1;
+      @media (max-width: 767px) {
+        background: linear-gradient(90deg, rgba(0, 44, 180, 1) 0%, rgba(0, 45, 183, 0.6) 100%);
+      }
+    }
+
+    .container {
+      display: flex;
+      height: 100%;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: flex-start;
+      align-content: flex-start;
+      color: var(--white);
+      gap: 30px;
+      padding: 0px 24px;
+      padding-bottom: 40px;
+      @media (max-width: 767px) {
+        justify-content: flex-start;
+        padding-top: 100px;
+        gap: 14px;
+
+        .title.title--90 {
+          font-size: 40px;
+        }
+      }
+      @media (max-width: 374px) {
+        .title.title--90 {
+          font-size: 36px;
+        }
+      }
+
+      .list {
+        margin-top: -28px;
+        @media (max-width: 767px) {
+          margin-top: -14px;
+        }
+        li {
+          margin: 0px;
+          &::before {
+            background: var(--white);
+          }
+        }
+      }
+      div,
+      ul,
+      span {
+        max-width: 600px;
+        @media (max-width: 1279px) {
+          max-width: 450px;
+        }
+        @media (max-width: 767px) {
+          font-size: 14px;
+          line-height: 1.5;
+        }
+      }
+
+      strong {
+        display: block;
+        width: 100%;
+        font-size: 24px;
+        font-family: var(--400);
+        font-weight: 400;
+        @media (max-width: 767px) {
+          font-size: 16px;
+        }
+      }
+
+      strong + a {
+        text-decoration: underline;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.swiper-buttons {
+  display: inline-flex;
+  position: absolute;
+  right: 40px;
+  bottom: 40px;
+  width: auto;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  gap: 20px;
+  z-index: 5;
+
+  .arrow {
+    transform: rotate(90deg);
+    &:last-child {
+      transform: rotate(-90deg);
+    }
+  }
+
+  @media (max-width: 767px) {
+    right: 20px;
+    bottom: 20px;
+  }
+}

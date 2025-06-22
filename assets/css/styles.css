@@ -2796,6 +2796,157 @@ a {
     gap: 24px;
   }
 }
+.section--projection {
+  padding: 0;
+  height: 100svh;
+  position: relative;
+}
+
+.projection {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: var(--blue);
+}
+.projection .swiper-slide {
+  height: 100%;
+}
+.projection .swiper-slide picture {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+.projection .swiper-slide picture img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.projection .swiper-slide:before {
+  content: "";
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  background: #002cb4;
+  background: linear-gradient(90deg, rgb(0, 44, 180) 0%, rgba(0, 45, 183, 0) 100%);
+  z-index: 1;
+}
+@media (max-width: 767px) {
+  .projection .swiper-slide:before {
+    background: linear-gradient(90deg, rgb(0, 44, 180) 0%, rgba(0, 45, 183, 0.6) 100%);
+  }
+}
+.projection .swiper-slide .container {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  align-content: flex-start;
+  color: var(--white);
+  gap: 30px;
+  padding: 0px 24px;
+  padding-bottom: 40px;
+}
+@media (max-width: 767px) {
+  .projection .swiper-slide .container {
+    justify-content: flex-start;
+    padding-top: 100px;
+    gap: 14px;
+  }
+  .projection .swiper-slide .container .title.title--90 {
+    font-size: 40px;
+  }
+}
+@media (max-width: 374px) {
+  .projection .swiper-slide .container .title.title--90 {
+    font-size: 36px;
+  }
+}
+.projection .swiper-slide .container .list {
+  margin-top: -28px;
+}
+@media (max-width: 767px) {
+  .projection .swiper-slide .container .list {
+    margin-top: -14px;
+  }
+}
+.projection .swiper-slide .container .list li {
+  margin: 0px;
+}
+.projection .swiper-slide .container .list li::before {
+  background: var(--white);
+}
+.projection .swiper-slide .container div,
+.projection .swiper-slide .container ul,
+.projection .swiper-slide .container span {
+  max-width: 600px;
+}
+@media (max-width: 1279px) {
+  .projection .swiper-slide .container div,
+.projection .swiper-slide .container ul,
+.projection .swiper-slide .container span {
+    max-width: 450px;
+  }
+}
+@media (max-width: 767px) {
+  .projection .swiper-slide .container div,
+.projection .swiper-slide .container ul,
+.projection .swiper-slide .container span {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+}
+.projection .swiper-slide .container strong {
+  display: block;
+  width: 100%;
+  font-size: 24px;
+  font-family: var(--400);
+  font-weight: 400;
+}
+@media (max-width: 767px) {
+  .projection .swiper-slide .container strong {
+    font-size: 16px;
+  }
+}
+.projection .swiper-slide .container strong + a {
+  text-decoration: underline;
+}
+.projection .swiper-slide .container a:hover {
+  text-decoration: underline;
+}
+
+.swiper-buttons {
+  display: inline-flex;
+  position: absolute;
+  right: 40px;
+  bottom: 40px;
+  width: auto;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  gap: 20px;
+  z-index: 5;
+}
+.swiper-buttons .arrow {
+  transform: rotate(90deg);
+}
+.swiper-buttons .arrow:last-child {
+  transform: rotate(-90deg);
+}
+@media (max-width: 767px) {
+  .swiper-buttons {
+    right: 20px;
+    bottom: 20px;
+  }
+}
+
 .projects {
   counter-reset: num;
   display: flex;

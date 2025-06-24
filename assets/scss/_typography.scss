@@ -26,7 +26,10 @@
   }
 
   &.title--64 {
-    font-size: myclamp(50px, 64px, 1440px, 1440px);
-    line-height: 1;
+    font-size: myclamp(46px, 64px, 1440px, 1440px);
+    line-height: 1.1;
+    @media (max-width: 374px) {
+      font-size: myclamp(38px, 64px, 767px, 767px);
+    }
   }
 }

@@ -32,3 +32,42 @@ export const initSliders = () => {
     });
   });
 };
+
+let swiperInstance = null;
+
+export const initRecipeSlider = () => {
+  const recipeSlider = document.querySelector('[data-recipes]');
+
+  if (!recipeSlider) return;
+
+  const initSwiper = () => {
+    swiperInstance = new Swiper(recipeSlider, {
+      slidesPerView: 1,
+      centeredSlides: true,
+      spaceBetween: 30,
+    });
+  };
+
+  const destroySwiper = () => {
+    if (swiperInstance) {
+      swiperInstance.destroy(true, true);
+      swiperInstance = null;
+    }
+  };
+
+  const handleResize = () => {
+    const screenWidth = window.innerWidth;
+
+    if (screenWidth <= 767) {
+      if (!swiperInstance) initSwiper();
+    } else {
+      destroySwiper();
+    }
+  };
+
+  // Инициализация на старте
+  handleResize();
+
+  // Обработка ресайза
+  window.addEventListener('resize', handleResize);
+};

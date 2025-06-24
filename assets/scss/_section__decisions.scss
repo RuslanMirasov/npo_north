@@ -139,16 +139,16 @@
     transform: translate(0%, 0%) rotate(0deg);
     &.gradient--1 {
       opacity: 0.8;
-      background: url('../img/gradient1.png') no-repeat center center/cover;
+      background: url('../img/gradient1.webp') no-repeat center center/cover;
       animation: grad1 10s linear infinite;
     }
     &.gradient--2 {
       opacity: 1;
-      background: url('../img/gradient2.png') no-repeat center center/cover;
+      background: url('../img/gradient2.webp') no-repeat center center/cover;
       animation: grad2 10s linear infinite;
     }
     &.gradient--3 {
-      background: url('../img/gradient3.png') no-repeat center center/cover;
+      background: url('../img/gradient3.webp') no-repeat center center/cover;
       animation: grad3 10s linear infinite;
     }
   }

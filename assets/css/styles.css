@@ -562,6 +562,9 @@ a {
   z-index: 3;
   overflow: hidden;
 }
+.arrow[disabled] {
+  opacity: 0.4;
+}
 .arrow:before {
   content: "";
   display: block;
@@ -574,6 +577,12 @@ a {
   background: url("../img/svg/arrow.svg") no-repeat center center/cover;
   -webkit-animation: arrowBounce 2.5s ease-in-out infinite;
           animation: arrowBounce 2.5s ease-in-out infinite;
+}
+.arrow.blue {
+  border: 1px solid var(--blue-light);
+}
+.arrow.blue:before {
+  background: url("../img/svg/arrow-blue.svg") no-repeat center center/cover;
 }
 
 @-webkit-keyframes arrowBounce {
@@ -3919,6 +3928,62 @@ a {
     margin-top: 30px;
   }
 }
+.project-navigation {
+  display: flex;
+  position: relative;
+  width: 100%;
+  justify-content: flex-end;
+  margin-top: -20px;
+  margin-bottom: 20px;
+}
+.project-navigation ul {
+  display: inline-flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  gap: 12px;
+  height: 50px;
+}
+.project-navigation ul li {
+  flex-shrink: 0;
+  max-height: 52px;
+}
+.project-navigation ul li a {
+  display: inline-flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  flex-shrink: 0;
+  color: var(--blue-light);
+  font-size: 12px;
+}
+.project-navigation ul li span {
+  display: inline-block;
+  max-width: 182px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.project-navigation ul li:first-child {
+  padding-left: 0px !important;
+}
+.project-navigation ul li:first-child .arrow {
+  flex-shrink: 0;
+  max-height: 50px;
+  transform: rotate(90deg) !important;
+}
+.project-navigation ul li:last-child {
+  border: 1px solid var(--blue-light);
+  border-radius: 50px;
+  padding-left: 24px;
+}
+.project-navigation ul li:last-child .arrow {
+  transform: rotate(-90deg);
+  border: none;
+}
+
 .section--smrHero {
   padding-top: 190px;
   padding-bottom: 100px;

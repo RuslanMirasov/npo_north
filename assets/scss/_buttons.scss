@@ -79,6 +79,10 @@
   z-index: 3;
   overflow: hidden;
 
+  &[disabled] {
+    opacity: 0.4;
+  }
+
   &:before {
     content: '';
     display: block;
@@ -90,6 +94,13 @@
     transform: translate(0%, 0%);
     background: url('../img/svg/arrow.svg') no-repeat center center/cover;
     animation: arrowBounce 2.5s ease-in-out infinite;
+  }
+
+  &.blue {
+    border: 1px solid var(--blue-light);
+    &:before {
+      background: url('../img/svg/arrow-blue.svg') no-repeat center center/cover;
+    }
   }
 }
 

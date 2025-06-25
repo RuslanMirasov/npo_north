@@ -2604,6 +2604,11 @@ a {
   overflow: visible;
   padding-top: clamp(100px, 13.8889vw, 200px);
 }
+@media (max-width: 767px) {
+  .section--vacancies:before, .section--vacancies:after {
+    content: none;
+  }
+}
 
 .vacancies-hero {
   display: inline-block;

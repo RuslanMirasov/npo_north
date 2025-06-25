@@ -1,6 +1,13 @@
 .section--vacancies {
   overflow: visible;
   padding-top: myclamp(100px, 200px, 1440px, 1440px);
+
+  @media (max-width: 767px) {
+    &:before,
+    &:after {
+      content: none;
+    }
+  }
 }
 
 .vacancies-hero {

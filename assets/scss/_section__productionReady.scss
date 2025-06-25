@@ -115,6 +115,10 @@
 @media (max-width: 767px) {
   .section--productionReady {
     padding: 40px 0px 100px 0px;
+    &::after,
+    &::before {
+      content: none;
+    }
 
     .title--90 {
       padding-left: 80px;

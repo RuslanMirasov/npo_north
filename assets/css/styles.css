@@ -4375,6 +4375,9 @@ a {
     padding-bottom: 0px;
     overflow: visible;
   }
+  .section--productionHead::after, .section--productionHead::before {
+    content: none;
+  }
   .section--productionHead .container .inner {
     width: 100%;
     order: 2;
@@ -4416,6 +4419,9 @@ a {
     right: -20px;
     width: 240px;
     height: 240px;
+  }
+  .section--productionPhotos::after, .section--productionPhotos::before {
+    content: none;
   }
   .photo-grid .photo-grid__inner img {
     height: auto;
@@ -4575,6 +4581,9 @@ a {
 @media (max-width: 767px) {
   .section--productionReady {
     padding: 40px 0px 100px 0px;
+  }
+  .section--productionReady::after, .section--productionReady::before {
+    content: none;
   }
   .section--productionReady .title--90 {
     padding-left: 80px;

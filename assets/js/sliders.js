@@ -4,6 +4,7 @@ export const initSliders = () => {
 
   sliders.forEach(slider => {
     const slidesPerView = slider.dataset.slidesPerView || 1;
+    const slidesPerViewMobil = slider.dataset.slidesPerViewMobil || 1;
     const spaceBetween = slider.dataset.spaceBetween || 0;
     const spaceBetweenMobile = slider.dataset.spaceBetweenMobile || 0;
     const nextBtn = slider.querySelector('[data-next]');
@@ -21,7 +22,7 @@ export const initSliders = () => {
       },
       breakpoints: {
         0: {
-          slidesPerView: 1,
+          slidesPerView: slidesPerViewMobil,
           spaceBetween: spaceBetweenMobile,
         },
         768: {
@@ -33,9 +34,8 @@ export const initSliders = () => {
   });
 };
 
-let swiperInstance = null;
-
 export const initRecipeSlider = () => {
+  let swiperInstance = null;
   const recipeSlider = document.querySelector('[data-recipes]');
 
   if (!recipeSlider) return;

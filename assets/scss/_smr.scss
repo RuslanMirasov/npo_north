@@ -2,6 +2,13 @@
   padding-top: 190px;
   padding-bottom: 100px;
 
+  @media (max-width: 767px) {
+    &:before,
+    &:after {
+      content: none;
+    }
+  }
+
   .title--90 {
     position: relative;
     display: flex;

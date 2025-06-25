@@ -3463,6 +3463,9 @@ a {
   .section--smr {
     padding: 50px 0px 90px 0px;
   }
+  .section--smr:before, .section--smr:after {
+    content: none;
+  }
 }
 
 .smr {
@@ -3891,6 +3894,11 @@ a {
 .section--smrHero {
   padding-top: 190px;
   padding-bottom: 100px;
+}
+@media (max-width: 767px) {
+  .section--smrHero:before, .section--smrHero:after {
+    content: none;
+  }
 }
 .section--smrHero .title--90 {
   position: relative;

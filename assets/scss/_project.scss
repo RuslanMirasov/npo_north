@@ -47,10 +47,35 @@
     gap: 20px;
     width: calc(50% - 12px);
     order: 1;
+
+    .iframe {
+      position: relative;
+      width: 100%;
+      &:before {
+        content: '';
+        display: block;
+        width: 100%;
+        padding-top: 56.3%;
+      }
+      iframe {
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        width: 100%;
+        border: none;
+        height: 100%;
+      }
+    }
+
     &:first-child {
       p {
         font-size: 16px;
         display: block;
+      }
+
+      p,
+      ul,
+      ol {
         max-width: 444px;
         margin: 0 auto;
       }
@@ -58,8 +83,10 @@
   }
 
   p {
+    width: 100%;
     font-size: 14px;
     line-height: 1.6;
+    text-align: left;
   }
 
   img {

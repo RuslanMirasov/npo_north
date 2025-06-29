@@ -5,6 +5,10 @@
   }
   @media (max-width: 767px) {
     padding: 50px 0px;
+    &:before,
+    &:after {
+      content: none;
+    }
   }
 }
 
@@ -113,6 +117,9 @@
       align-items: flex-start;
       gap: 12px;
       padding: 20px 0px 60px 0px;
+      br {
+        display: none;
+      }
       a {
         font-size: 24px;
         padding: 0px;

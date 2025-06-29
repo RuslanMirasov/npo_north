@@ -166,6 +166,11 @@
 
 .accordeon {
   background: var(--grey-light);
+  display: none;
+
+  &.visible {
+    display: block;
+  }
 
   header {
     display: flex;
@@ -318,7 +323,7 @@
     margin-bottom: 10px;
     .progress__range {
       height: 100%;
-      transition: 0.3s;
+      transition: 1s;
       background: var(--blue-light);
     }
   }

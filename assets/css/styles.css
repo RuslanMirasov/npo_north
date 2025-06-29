@@ -639,6 +639,7 @@ a {
   }
 }
 .load-more {
+  position: relative;
   font-size: 15px;
   height: 48px;
   width: 100%;
@@ -653,7 +654,48 @@ a {
   color: var(--blue-light);
   border: 1px solid var(--blue-light);
 }
+.load-more.loading {
+  color: var(--white);
+  pointer-events: none;
+}
+.load-more.loading:before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: var(--white);
+  border-radius: 20px;
+  border-left: 2px solid var(--blue-light);
+  border-top: 2px solid var(--blue-light);
+  border-right: 2px solid rgba(0, 0, 0, 0);
+  border-bottom: 2px solid rgba(0, 0, 0, 0);
+  left: 50%;
+  top: 50%;
+  margin: -10px 0px -10px 0px;
+  -webkit-animation: spin 0.3s linear infinite;
+          animation: spin 0.3s linear infinite;
+}
+.load-more.hidden {
+  display: none;
+}
 
+@-webkit-keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
 .title {
   display: block;
   font-family: var(--500);
@@ -1431,8 +1473,9 @@ a {
   padding-top: 450px;
 }
 .section--counters.invert:before {
-  background: url("../img/about/about-bg.webp") no-repeat center top/cover;
-  min-height: 100svh;
+  background: url("../img/about/about-bg.webp") no-repeat center center/cover;
+  height: 890px;
+  max-height: 100svh;
 }
 .section--counters.invert:after {
   content: none;
@@ -2776,6 +2819,10 @@ a {
 
 .accordeon {
   background: var(--grey-light);
+  display: none;
+}
+.accordeon.visible {
+  display: block;
 }
 .accordeon header {
   display: flex;
@@ -2914,7 +2961,7 @@ a {
 }
 .vacancies__pagination .progress .progress__range {
   height: 100%;
-  transition: 0.3s;
+  transition: 1s;
   background: var(--blue-light);
 }
 .vacancies__pagination p {
@@ -3654,6 +3701,9 @@ a {
   .section--certificats {
     padding: 50px 0px;
   }
+  .section--certificats:before, .section--certificats:after {
+    content: none;
+  }
 }
 
 .projects {
@@ -3747,6 +3797,9 @@ a {
     align-items: flex-start;
     gap: 12px;
     padding: 20px 0px 60px 0px;
+  }
+  .projects li br {
+    display: none;
   }
   .projects li a {
     font-size: 24px;

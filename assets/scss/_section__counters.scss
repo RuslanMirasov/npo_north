@@ -33,8 +33,9 @@
   &.invert {
     padding-top: 450px;
     &:before {
-      background: url('../img/about/about-bg.webp') no-repeat center top/cover;
-      min-height: 100svh;
+      background: url('../img/about/about-bg.webp') no-repeat center center/cover;
+      height: 890px;
+      max-height: 100svh;
     }
     &:after {
       content: none;

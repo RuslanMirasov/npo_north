@@ -132,6 +132,7 @@
 }
 
 .load-more {
+  position: relative;
   font-size: 15px;
   height: 48px;
   width: 100%;
@@ -144,5 +145,38 @@
   &:hover {
     color: var(--blue-light);
     border: 1px solid var(--blue-light);
+  }
+  &.loading {
+    color: var(--white);
+    pointer-events: none;
+    &:before {
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: var(--white);
+      border-radius: 20px;
+      border-left: 2px solid var(--blue-light);
+      border-top: 2px solid var(--blue-light);
+      border-right: 2px solid rgba(0, 0, 0, 0);
+      border-bottom: 2px solid rgba(0, 0, 0, 0);
+      left: 50%;
+      top: 50%;
+      margin: -10px 0px -10px 0px;
+      animation: spin 0.3s linear infinite;
+    }
+  }
+
+  &.hidden {
+    display: none;
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
   }
 }

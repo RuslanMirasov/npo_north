@@ -1,5 +1,5 @@
 .section--benefits {
-  padding: 0px 0px 100px 0px;
+  padding: 100px 0px 100px 0px;
 }
 
 .benefits {
@@ -10,7 +10,7 @@
   justify-content: flex-end;
   align-items: flex-start;
   align-content: flex-start;
-  margin-top: 30px;
+  margin-top: 100px;
 
   li {
     display: flex;
@@ -34,10 +34,10 @@
 
 @media (max-width: 1279px) and (min-width: 768px) {
   .section--benefits {
-    padding: 30px 0px 60px 0px;
+    padding: 60px 0px 60px 0px;
   }
   .benefits {
-    margin-top: 40px;
+    margin-top: 60px;
     li {
       gap: 18px;
       width: 25%;
@@ -60,11 +60,15 @@
 
 @media (max-width: 767px) {
   .section--benefits {
-    padding: 0px 0px 40px 0px;
+    padding: 60px 0px 40px 0px;
+
+    .title--100 {
+      font-size: 42px;
+    }
   }
   .benefits {
     gap: 60px;
-    margin-top: 30px;
+    margin-top: 60px;
     margin-bottom: 80px;
 
     li {

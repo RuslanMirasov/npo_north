@@ -595,6 +595,13 @@ a {
 .arrow.blue:before {
   background: url("../img/svg/arrow-blue.svg") no-repeat center center/cover;
 }
+.arrow.white {
+  border: 1px solid #d9d9d9;
+  background: var(--white);
+}
+.arrow.white:before {
+  background: url("../img/svg/arrow-blue-dark.svg") no-repeat center center/cover;
+}
 
 @-webkit-keyframes arrowBounce {
   0% {
@@ -2555,13 +2562,27 @@ a {
   justify-content: flex-start;
   align-items: flex-start;
   align-content: center;
-  padding: 48px;
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
   text-align: left;
   background: var(--white);
   transform: translate(-141.5%, 0%);
   margin-top: 2%;
   z-index: 2;
+}
+.contacts .contacts__tab {
+  display: none;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: center;
+  position: relative;
+  width: 100%;
+  min-height: 514px;
+  padding: 48px;
+  text-align: left;
+}
+.contacts .contacts__tab.active {
+  display: flex;
 }
 @media (max-width: 1599px) {
   .contacts {
@@ -2577,10 +2598,13 @@ a {
 @media (max-width: 767px) {
   .contacts {
     max-width: calc(100% - 40px);
-    padding: 40px 20px 50px 20px;
     margin-left: 20px;
     margin-top: -280px;
     margin-bottom: 100px;
+  }
+  .contacts .contacts__tab {
+    min-height: auto;
+    padding: 40px 20px 50px 20px;
   }
 }
 .contacts h1 {
@@ -2667,6 +2691,33 @@ a {
 
 [class*=map-copyrights-promo] {
   display: none !important;
+}
+
+.tabs {
+  display: flex;
+  width: 100%;
+}
+
+.tab-button {
+  display: flex;
+  position: relative;
+  width: 50%;
+  height: 48px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  font-size: 18px;
+  background: var(--white);
+  color: var(--blue);
+  transition: 0.3s;
+}
+.tab-button:hover {
+  background: var(--grey-light);
+}
+.tab-button.active {
+  background: var(--blue);
+  color: var(--white);
 }
 
 .section--vacancies {
@@ -3558,7 +3609,7 @@ a {
   }
 }
 .section--smr {
-  padding: 80px 0px 50px 0px;
+  padding: 80px 0px 24px 0px;
 }
 @media (max-width: 767px) {
   .section--smr {
@@ -4586,7 +4637,7 @@ a {
   }
 }
 .section--productionReady {
-  padding: 60px 0px;
+  padding: 60px 0px 24px 0px;
 }
 .section--productionReady .title--90 {
   display: block;
@@ -5217,5 +5268,77 @@ a {
   }
   .recipes .swiper-wrapper .swiper-slide .recipe p {
     font-size: 16px;
+  }
+}
+.section--contactinformation {
+  padding: 30px 0px 50px 0px;
+  background: var(--blue);
+  color: var(--white);
+}
+.section--contactinformation .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-end;
+  align-content: flex-end;
+  gap: 30px;
+  z-index: 5;
+}
+
+.contactinformation {
+  display: inline-flex;
+  position: relative;
+  width: 50%;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 6px;
+  padding-bottom: 14px;
+  font-size: 16px;
+  margin-left: auto;
+}
+.contactinformation p {
+  display: inline-flex;
+  width: auto;
+  gap: 4px;
+  flex-direction: column;
+}
+.contactinformation span {
+  font-size: 24px;
+}
+.contactinformation .email {
+  text-decoration: underline;
+}
+
+@media (max-width: 1279px) {
+  .contactinformation {
+    gap: 6px;
+    padding-bottom: 12px;
+    font-size: 14px;
+  }
+  .contactinformation span {
+    font-size: 20px;
+  }
+}
+@media (max-width: 1023px) {
+  .contactinformation {
+    gap: 4px;
+    padding-bottom: 8px;
+    font-size: 12px;
+  }
+  .contactinformation span {
+    font-size: 14px;
+  }
+}
+@media (max-width: 767px) {
+  .section--contactinformation {
+    margin-top: -50px;
+  }
+  .contactinformation {
+    width: 100%;
+    font-size: 14px;
+  }
+  .contactinformation span {
+    font-size: 18px;
   }
 }

@@ -49,16 +49,53 @@
       <section class="section section--yandexMap">
         <div class="map" id="map"></div>
         <div class="contacts">
-          <h1>Контакты</h1>
-          <address>115304,&nbsp;г. Москва, ул.&nbsp;Каспийская, д. 22, стр. 5, корп. 1</address>
-          <ul>
-            <li>
-              <a href="https://yandex.ru/maps/?rtext=~55.625669,37.675729" target="_blank" class="yandex">Построить маршрут</a>
-            </li>
-            <li><a href="tel:+74952281846" class="phone">+7 495 228-18-46</a></li>
-            <li><a href="mailto:info@nponorth.ru" class="email">info@nponorth.ru</a></li>
-            <li>Генеральный директор: <br />Колосков <br />Георгий Владимирович</li>
-          </ul>
+          <div class="tabs">
+            <button
+              class="tab-button active"
+              data-tab-button="1"
+              data-center-mobil="[55.624891, 37.675697]"
+              data-center-desktop="[55.626029, 37.673639]"
+              data-address="[55.625669, 37.675729]"
+              data-description="Москва, ул. Каспийская, д. 22, стр. 5, корп. 1"
+            >
+              Москва
+            </button>
+            <button
+              class="tab-button"
+              data-tab-button="2"
+              data-center-mobil="[56.159157, 40.410834]"
+              data-center-desktop="[56.160295, 40.408776]"
+              data-address="[56.159935, 40.410866]"
+              data-description="Владимир, ул. Полины Осипенко, д. 62"
+            >
+              Владимир
+            </button>
+          </div>
+
+          <div class="contacts__tab active" data-tab="1">
+            <h1>Контакты</h1>
+            <address>115304,&nbsp;г. Москва, ул.&nbsp;Каспийская, д. 22, стр. 5, корп. 1</address>
+            <ul>
+              <li>
+                <a href="https://yandex.ru/maps/?rtext=~55.625669,37.675729" target="_blank" class="yandex">Построить маршрут</a>
+              </li>
+              <li><a href="tel:+74952281846" class="phone">+7 495 228-18-46</a></li>
+              <li><a href="mailto:info@nponorth.ru" class="email">info@nponorth.ru</a></li>
+              <li>Генеральный директор: <br />Колосков <br />Георгий Владимирович</li>
+            </ul>
+          </div>
+          <div class="contacts__tab" data-tab="2">
+            <h1>Контакты</h1>
+            <address>600009, г.&nbsp;Владимир, ул.&nbsp;Полины Осипенко, д.&nbsp;62</address>
+            <ul>
+              <!-- <li>
+                <a href="https://yandex.ru/maps/?rtext=~55.625669,37.675729" target="_blank" class="yandex">Построить маршрут</a>
+              </li> -->
+              <!-- <li><a href="tel:+74952281846" class="phone">+7 495 228-18-46</a></li>
+              <li><a href="mailto:info@nponorth.ru" class="email">info@nponorth.ru</a></li> -->
+              <li>Директор ОП: <br />Терентьев <br />Алексей Владимирович</li>
+            </ul>
+          </div>
         </div>
       </section>
     </main>

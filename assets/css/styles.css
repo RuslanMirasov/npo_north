@@ -3188,7 +3188,7 @@ a {
 .section--projection {
   padding: 0;
   height: 100svh;
-  min-height: 500px;
+  min-height: 540px;
   position: relative;
 }
 

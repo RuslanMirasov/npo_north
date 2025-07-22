@@ -2577,7 +2577,7 @@ a {
   align-content: center;
   position: relative;
   width: 100%;
-  min-height: 514px;
+  min-height: 530px;
   padding: 48px;
   text-align: left;
 }
@@ -2607,7 +2607,8 @@ a {
     padding: 40px 20px 50px 20px;
   }
 }
-.contacts h1 {
+.contacts h1,
+.contacts h2 {
   font-family: var(--400);
   font-weight: 400;
   font-size: 18px;
@@ -3187,6 +3188,7 @@ a {
 .section--projection {
   padding: 0;
   height: 100svh;
+  min-height: 500px;
   position: relative;
 }
 
@@ -3241,6 +3243,7 @@ a {
   gap: 30px;
   padding: 0px 24px;
   padding-bottom: 40px;
+  padding-top: 100px;
 }
 @media (max-width: 767px) {
   .projection .swiper-slide .container {
@@ -3276,7 +3279,14 @@ a {
 .projection .swiper-slide .container span {
   max-width: 600px;
 }
-@media (max-width: 1279px) {
+@media (max-height: 600px) {
+  .projection .swiper-slide .container div,
+.projection .swiper-slide .container ul,
+.projection .swiper-slide .container span {
+    max-width: 900px;
+  }
+}
+@media (max-width: 1023px) {
   .projection .swiper-slide .container div,
 .projection .swiper-slide .container ul,
 .projection .swiper-slide .container span {

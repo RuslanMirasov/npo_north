@@ -44,7 +44,7 @@
     align-content: center;
     position: relative;
     width: 100%;
-    min-height: 514px;
+    min-height: 530px;
     padding: 48px;
     text-align: left;
     &.active {
@@ -72,7 +72,8 @@
     }
   }
 
-  h1 {
+  h1,
+  h2 {
     font-family: var(--400);
     font-weight: 400;
     font-size: 18px;
